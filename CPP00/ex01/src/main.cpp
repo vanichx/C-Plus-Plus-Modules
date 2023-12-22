@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 21:43:10 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/21 22:19:57 by ivanpetruni      ###   ########.fr       */
+/*   Created: 2023/12/22 15:41:21 by ivanpetruni       #+#    #+#             */
+/*   Updated: 2023/12/22 17:27:17 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <vector>
-#include <iostream>
-#include <cctype>
+#include <Contact.hpp>
+#include <Phonebook.hpp>
 
-int main(int argc, char **argv)
+int main()
 {
-	if (argc > 1) {
-		for(int i = 1; argv[i]; i++) {
-			for (int j = 0; argv[i][j]; j++) {
-				std::cout << (char) toupper(argv[i][j]);
-			}
-			if (argv[i + 1])
-				std::cout << ' ';
+	std::string command;
+	Phonebook
+
+	while (true)
+	{
+		std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
+		std::cin >> command;
+
+		if (command == "ADD") {
+			
+		} else if (command == "SEARCH") {
+			
+		} else if (command == "EXIT") {
+			std::cout << "Exiting the program. Contacts are lost forever!";
+			std::cout << std::endl;
+			break;
 		}
-	} 
-	else {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	}
-	std::cout << std::endl;
 	return EXIT_SUCCESS;
 }
