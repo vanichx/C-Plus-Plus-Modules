@@ -6,11 +6,11 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 16:27:29 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/22 16:55:05 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2023/12/22 17:58:09 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Contact.hpp>
+#include "../inc/Contact.hpp"
 
 void Contact::setContactInfo() {
 	std::cout << "Enter the first name:" << std::endl;
@@ -33,6 +33,3 @@ void Contact::displayContactInfo() const {
     std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
 }
 
-void addContact(Contact& contact) {
-	contact.setContactInfo();
-}

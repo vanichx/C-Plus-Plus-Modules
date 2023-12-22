@@ -6,13 +6,13 @@
 #    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 10:06:26 by ipetruni          #+#    #+#              #
-#    Updated: 2023/12/21 21:38:22 by ivanpetruni      ###   ########.fr        #
+#    Updated: 2023/12/22 17:53:31 by ivanpetruni      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME = philo
+NAME = phonebook
 
 # FILES AND PATH TO THEM
 
@@ -20,18 +20,16 @@ OBJ_DIR = obj/
 SRC_DIR = src/
 
 SRC	=	main \
-		parse \
-		routine \
-		threads \
-		utils 
+		Contact \
+		PhoneBook
 
-SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
+SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
 
 # COMMANDS
 
-CC = gcc 
-FLAGS = -Wall -Wextra -Werror 
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 all: $(NAME)
@@ -40,7 +38,7 @@ $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 	@echo "$(GREEN)$(NAME) was successfully created!$(DEFAULT)"
 	
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c 
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	@mkdir -p $(@D)
 	@$(CC) $(CFLAGS) -I./includes -c $< -o $@
 	
@@ -48,11 +46,11 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 clean:
 		@$(RM) $(OBJS)
 		@$(RM) $(OBJ_DIR)
-		@echo "$(YELLOW)philo objects files deleted!$(DEFAULT)"
+		@echo "$(YELLOW)$(NAME) objects files deleted!$(DEFAULT)"
 	
 fclean: clean
 		@$(RM) $(NAME)
-		@echo "$(RED)philo program and objects deleted!$(DEFAULT)"
+		@echo "$(RED)$(NAME) program and objects deleted!$(DEFAULT)"
 
 re:		fclean all
 
