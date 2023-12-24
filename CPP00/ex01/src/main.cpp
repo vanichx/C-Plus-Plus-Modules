@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:41:21 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/22 17:54:05 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2023/12/24 22:21:29 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,26 @@ int main()
 {
 	std::string command;
 	PhoneBook Book;
-
-	while (true)
+	
+	while (42)
 	{
-		std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
-		std::cin >> command;
-
-		if (command == "ADD") {
-            Contact newContact;
-			Book.addContact(newContact);
-		} else if (command == "SEARCH") {
-			
-		} else if (command == "EXIT") {
-			std::cout << "Exiting the program. Contacts are lost forever!";
+		std::cout << "Enter a command " << GREEN << "(ADD, SEARCH, EXIT):"  RESET;
+		std::getline(std::cin, command);
+		if (command.empty())
+			continue;
+		if (!command.compare("ADD")) {
+			Book.addContact();
+		} else if (!command.compare("SEARCH")) {
+			Book.searchContact();
+		} else if (!command.compare("EXIT")) {
+			std::cout << RED << "Exiting the program. Contacts are lost forever!" << RESET;
 			std::cout << std::endl;
 			break;
+		} else {
+			std::cout << YELLOW << "Invalid command. Please enter ADD, SEARCH, or EXIT." << RESET;
+			std::cout << std::endl;
 		}
+		command.clear();
 	}
-	return EXIT_SUCCESS;
+	return (EXIT_SUCCESS);
 }
