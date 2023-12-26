@@ -6,14 +6,14 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 14:34:48 by ipetruni          #+#    #+#             */
-/*   Updated: 2023/12/26 15:52:11 by ipetruni         ###   ########.fr       */
+/*   Updated: 2023/12/26 16:28:10 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctime>
 #include <iomanip>
 #include <iostream>
-#include "Account.hpp"
+#include "../inc/Account.hpp"
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
