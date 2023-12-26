@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:41:21 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/24 22:21:29 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2023/12/26 14:28:58 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Contact.hpp"
-#include "../inc/PhoneBook.hpp"
+#include "../inc/Phonebook.hpp"
 
 int main()
 {
@@ -23,7 +23,9 @@ int main()
 		std::cout << "Enter a command " << GREEN << "(ADD, SEARCH, EXIT):"  RESET;
 		std::getline(std::cin, command);
 		if (command.empty())
+		{
 			continue;
+		}
 		if (!command.compare("ADD")) {
 			Book.addContact();
 		} else if (!command.compare("SEARCH")) {

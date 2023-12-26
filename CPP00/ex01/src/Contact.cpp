@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 16:27:29 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/24 22:20:47 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2023/12/26 15:10:10 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,21 +34,33 @@ void Contact::printSingleContact() {
 }
 
 void Contact::printHeaderForContacts() {
-	std::cout << std::left;
+	std::cout << std::right;
 	std::cout << std::setw(10) << "   Index  " << "|";
 	std::cout << std::setw(10) << "First Name" << "|";
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nick Name" << "|";
 	std::cout << std::endl;
 	std::cout << "............................................";
-	std::cout << std::endl << std::right;
+	std::cout << std::endl;
 }
 
 void Contact::printSingleContactInfo() {
-	std::cout << std::left;
-	std::cout << std::setw(10) <<  m_firstName << "|";
-	std::cout << std::setw(10) << m_surName << "|";
-	std::cout << std::setw(10) << m_nickName << "|";
+	std::cout << std::right;
+	if (m_firstName.length() > 10) {
+		std::cout << std::setw(9) << m_firstName.substr(0, 9) << ".|";
+	} else {
+		std::cout << std::setw(10) <<  m_firstName << "|";
+	}
+	if (m_surName.length() > 10) {
+		std::cout << std::setw(9) << m_surName.substr(0, 9) << ".|";
+	} else {
+		std::cout << std::setw(10) << m_surName << "|";
+	}
+	if (m_nickName.length() > 10) {
+		std::cout << std::setw(9) << m_nickName.substr(0, 9) << ".|";
+	} else {
+		std::cout << std::setw(10) << m_nickName << "|";
+	}
 	std::cout << std::endl;
 }
 

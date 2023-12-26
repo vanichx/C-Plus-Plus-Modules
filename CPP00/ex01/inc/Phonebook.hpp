@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:21:00 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/24 22:22:00 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2023/12/26 15:17:28 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <string>
 #include <vector>
+#include <sstream>
 #include "Contact.hpp"
 
 #define RESET   "\033[0m"
@@ -30,6 +31,7 @@ class PhoneBook {
 	private:
 		Contact m_contacts[8];
 		size_t m_numberOfContacts;
+		size_t oldestContactIndex;
 	public:
 		PhoneBook();
 		~PhoneBook();
