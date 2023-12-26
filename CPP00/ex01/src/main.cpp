@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:41:21 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/26 14:28:58 by ipetruni         ###   ########.fr       */
+/*   Updated: 2023/12/26 15:45:43 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ int main()
 	
 	while (42)
 	{
+		if (std::cin.eof())
+			break;
 		std::cout << "Enter a command " << GREEN << "(ADD, SEARCH, EXIT):"  RESET;
-		std::getline(std::cin, command);
+		if (!std::getline(std::cin, command))
+			break;
 		if (command.empty())
-		{
 			continue;
-		}
 		if (!command.compare("ADD")) {
 			Book.addContact();
 		} else if (!command.compare("SEARCH")) {

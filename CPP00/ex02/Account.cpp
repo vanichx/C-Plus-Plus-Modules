@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 14:34:48 by ipetruni          #+#    #+#             */
-/*   Updated: 2023/12/25 16:13:52 by ipetruni         ###   ########.fr       */
+/*   Updated: 2023/12/26 15:52:11 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ Account::~Account(void) {
 }
 
 void Account::_displayTimestamp(void) {
-	std::time_t currentTime = std::time(nullptr);
+	std::time_t currentTime = std::time(NULL);
 	std::tm *localTime = std::localtime(&currentTime);
 	std::cout << '[' 
 			  << std::setw(4) << std::setfill('0') << (localTime->tm_year + 1900)

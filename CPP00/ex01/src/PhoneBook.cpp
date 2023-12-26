@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:20:04 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2023/12/26 15:18:21 by ipetruni         ###   ########.fr       */
+/*   Updated: 2023/12/26 15:43:51 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ void PhoneBook::addContactLess8() {
 	printMsg("Enter contact Name: ");
 	while(name.empty() || !onlySpace(name)) {
 		std::getline(std::cin, name);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(name)) {
 			std::cout << YELLOW "Invalid input. Name cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Name: " RESET;
@@ -68,6 +70,8 @@ void PhoneBook::addContactLess8() {
 	printMsg("Enter contact Surname: ");
 	while(surname.empty() || !onlySpace(surname)) {
 		std::getline(std::cin, surname);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(surname)) {
 			std::cout << YELLOW "Invalid input. Surname cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Surname: " RESET;
@@ -76,6 +80,8 @@ void PhoneBook::addContactLess8() {
 	printMsg("Enter contact Nickname: ");
 	while(nickname.empty() || !onlySpace(nickname)) {
 		std::getline(std::cin, nickname);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(nickname)) {
 			std::cout << YELLOW "Invalid input. Nickname cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Nickname: " RESET;
@@ -84,6 +90,8 @@ void PhoneBook::addContactLess8() {
 	printMsg("Enter contact Number: ");
 	while (number.empty() || !isNumber(number) || !onlySpace(number)) {
 		std::getline(std::cin, number);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(number) || !isNumber(number) || number.empty()) {
 			std::cout << YELLOW "Invalid input. Number cannot (be empty / contain only spaces / be non-numeric) " RESET << std::endl;
 			std::cout << GREEN "Enter contact Number: " RESET;
@@ -92,6 +100,8 @@ void PhoneBook::addContactLess8() {
 	printMsg("Enter contact Secret: ");
 	while(secret.empty()) {
 		std::getline(std::cin, secret);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(secret)) {
 			std::cout << YELLOW "Invalid input. Secret cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Secret: " RESET;
@@ -113,6 +123,8 @@ void PhoneBook::addContactMore8() {
 	printMsg("Enter contact Name: ");
 	while(name.empty() || !onlySpace(name)) {
 		std::getline(std::cin, name);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(name)) {
 			std::cout << YELLOW "Invalid input. Name cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Name: " RESET;
@@ -121,6 +133,8 @@ void PhoneBook::addContactMore8() {
 	printMsg("Enter contact Surname: ");
 	while(surname.empty() || !onlySpace(surname)) {
 		std::getline(std::cin, surname);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(surname)) {
 			std::cout << YELLOW "Invalid input. Surname cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Surname: " RESET;
@@ -129,6 +143,8 @@ void PhoneBook::addContactMore8() {
 	printMsg("Enter contact Nickname: ");
 	while(nickname.empty() || !onlySpace(nickname)) {
 		std::getline(std::cin, nickname);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(nickname)) {
 			std::cout << YELLOW "Invalid input. Nickname cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Nickname: " RESET;
@@ -137,6 +153,8 @@ void PhoneBook::addContactMore8() {
 	printMsg("Enter contact Number: ");
 	while (number.empty() || !isNumber(number) || !onlySpace(number)) {
 		std::getline(std::cin, number);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(number) || !isNumber(number) || number.empty()) {
 			std::cout << YELLOW "Invalid input. Number cannot (be empty / contain only spaces / be non-numeric) " RESET << std::endl;
 			std::cout << GREEN "Enter contact Number: " RESET;
@@ -145,6 +163,8 @@ void PhoneBook::addContactMore8() {
 	printMsg("Enter contact Secret: ");
 	while(secret.empty()) {
 		std::getline(std::cin, secret);
+		if (std::cin.eof())
+			return ;
 		if (!onlySpace(secret)) {
 			std::cout << YELLOW "Invalid input. Secret cannot be empty or contain only spaces." RESET << std::endl;
 			std::cout << GREEN "Enter contact Secret: " RESET;
@@ -168,6 +188,8 @@ void PhoneBook::searchContact()
 		<< "to see a specific contact info or " << GREEN "ALL " RESET \
 		<< "to see all of them: ";
 		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return ;
 	}
 	if (!input.compare("ALL")) {
 		if (m_numberOfContacts == 0) {
