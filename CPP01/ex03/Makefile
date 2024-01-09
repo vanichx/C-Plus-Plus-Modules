@@ -6,21 +6,23 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/01/09 12:22:28 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/01/09 15:33:16 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME = hiThisIsBrain
+NAME = violence
 
 # FILES AND PATH TO THEM
 
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	main 
-		
+SRC	=	main \
+		Weapon \
+		HumanA \
+		HumanB 
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
@@ -39,7 +41,7 @@ $(NAME): $(OBJS)
 	
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	@mkdir -p $(@D)
-	@$(CC) $(CFLAGS)  -c $< -o $@
+	@$(CC) $(CFLAGS) -I./includes -c $< -o $@
 	
 
 clean:
