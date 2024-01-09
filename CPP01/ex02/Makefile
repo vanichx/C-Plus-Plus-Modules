@@ -6,7 +6,7 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/01/08 16:37:20 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/01/09 09:43:07 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,8 @@ NAME = zombie
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	Zombie \
-    	main \
-		zombieHorde
+SRC	=	main 
+		
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
