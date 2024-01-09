@@ -6,23 +6,21 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/01/09 09:26:06 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/01/09 09:25:13 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME = zombie
-
+NAME = zombieHorde
 # FILES AND PATH TO THEM
 
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	Zombie \
-    	main \
-		newZombie \
-		randomChump
+SRC	=	main \
+		Zombie \
+		zombieHorde
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))

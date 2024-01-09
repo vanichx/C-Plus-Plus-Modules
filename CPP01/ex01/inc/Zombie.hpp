@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 09:10:39 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/08 16:14:48 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/08 16:27:35 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,9 @@ public:
 	~Zombie();
 public:
 	void announce(void);
-	Zombie* newZombie(std::string name);
-	void randomChump(std::string name);
+	void nameZombie(std::string name);
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
-
+Zombie	*zombieHorde( int N, std::string name);
 
 #endif
