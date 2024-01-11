@@ -6,13 +6,13 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/01/11 10:15:56 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/01/11 12:04:52 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME = harl_filter
+NAME =  harlFilter
 
 # FILES AND PATH TO THEM
 
