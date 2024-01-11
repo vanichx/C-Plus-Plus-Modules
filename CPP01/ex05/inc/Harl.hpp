@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:55:53 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/10 16:39:29 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/11 09:58:34 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Harl {
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+		void	exit(void);
 	public:
 		Harl();
 		~Harl();

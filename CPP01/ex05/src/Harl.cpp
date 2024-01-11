@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:55:55 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/10 17:10:54 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/11 10:10:43 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,33 @@ void	Harl::error(void) {
 	std::cerr << "I want to speak to the manager now." R << std::endl;
 }
 
-void	Harl::complain( std::string level ) {
-	if (level == "debug") {
-		debug();
-	} else if (level == "info") {
-		info();
-	} else if (level == "warning") {
-		warning();
-	} else if (level == "error") {
-		error();
-	} else if (level == "exit") {
-		std::cout << "Exiting program..." << std::endl;
+void	Harl::exit(void) {
+	std::cout << "Exiting program..." << std::endl;
 		return;
-	} else {
-		std::cout << Y "		Please enter valid level..." R<< std::endl;
+}
+
+void	Harl::complain( std::string level ) {
+	
+	void (Harl::*complainArray[])(void) = {
+		&Harl::debug,
+		&Harl::info,
+		&Harl::warning,
+		&Harl::error,	
+		&Harl::exit
+	};
+
+	std::string complains[5] = {
+		"debug",
+		"info",
+		"warning",
+		"error",
+		"exit"
+	};
+	
+	for (int i = 0; i < 5; i++) {
+		if (level.compare(complains[i]) == 0) {
+			(this->*complainArray[i])();
+			return ;
+		}	
 	}
 }
