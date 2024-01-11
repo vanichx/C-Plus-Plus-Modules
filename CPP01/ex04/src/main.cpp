@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:46:21 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/10 15:11:04 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/11 12:53:22 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ int main(int argc, char **argv) {
 		std::string inFileName = argv[1];
 		std::string outFileName = inFileName + ".replace";
 		
-		inFile.open(inFileName);
+		inFile.open(inFileName.c_str());
 		if (!inFile) {
 			printNoFileMsg();
 			return (1);	
 		}
-		outFile.open(outFileName);
+		outFile.open(outFileName.c_str());
 		searchAndReplace(inFile, outFile, argv[2], argv[3]);
 		inFile.close();
 		outFile.close();
