@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 15:55:55 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/11 11:20:13 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/01/11 10:16:57 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/01/11 11:32:35 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,27 +52,52 @@ void	Harl::error(void) {
 	std::cerr << "I want to speak to the manager now." R << std::endl;
 }
 
-void	Harl::complain( std::string level ) {
+void	Harl::exit(void) {
+	std::cout << "Exiting program..." << std::endl;
+		return;
+}
 
+void	Harl::complain( std::string level ) {
+	
 	void (Harl::*complainArray[])(void) = {
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,
 		&Harl::error,	
+		&Harl::exit
 	};
 
-	std::string complains[4] = {
+	std::string complains[5] = {
 		"debug",
 		"info",
 		"warning",
 		"error",
+		"exit"
 	};
 	
-	for (int i = 0; i < 4; i++) {
-		if (level.compare(complains[i]) == 0) {
-			(this->*complainArray[i])();
-			return ;
+	for (int i = 0; i < 5; i++) {
+		if (!level.compare(complains[i])) {
+			switch (i) {
+				case 0:
+					(this->*complainArray[0])();
+					break;
+				case 1:
+					(this->*complainArray[1])();
+					break;
+				case 2:
+					(this->*complainArray[2])();
+					break;
+				case 3:
+					(this->*complainArray[3])();
+					break;
+				case 4:
+					(this->*complainArray[4])();
+					break;
+				default:
+					break;
+			}
+			return;
 		}
 	}
-
+	std::cout << Y "		Level not found , try one more time..." R << std::endl;
 }

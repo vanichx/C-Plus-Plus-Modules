@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 15:55:53 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/11 11:14:45 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/01/11 10:16:41 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/01/11 10:16:53 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef COLOR_H
+#define COLOR_H
 
-#include <iostream>
-#include <string>
-#include "Colors.h"
-
-class Harl {
-	private:
-		void	debug(void);
-		void	info(void);
-		void	warning(void);
-		void	error(void);
-	public:
-		Harl();
-		~Harl();
-	public:
-		void	complain(std::string level);
-};
-
+#define R	"\033[0m"
+#define RD	"\033[31m"
+#define GR	"\033[32m"
+#define Y	"\033[33m"
+#define BL	"\033[34m"
+#define M	"\033[35m"
+#define W	"\033[37m"
+#define BLD "\033[1m"
 
 #endif
