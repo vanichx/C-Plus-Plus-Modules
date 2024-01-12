@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:55:58 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/11 11:33:08 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 13:54:54 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void) {
 	while (42) {
 		if (std::cin.eof())
 			break;
-		std::cout << "Please enter level " << GR "( debug / warning / info / error / exit ) :" R; 
+		std::cout << "Please enter level " << GR "(DEBUG, INFO, WARNING or ERROR) :" R; 
 		
 		if (!std::getline(std::cin, level))
 			break;
@@ -37,7 +37,7 @@ int main(void) {
 			continue;
 		}
 		harl.complain(level);
-		if (!level.compare("exit"))
+		if (!level.compare("EXIT"))
 			break;
 		level.clear();
 	}

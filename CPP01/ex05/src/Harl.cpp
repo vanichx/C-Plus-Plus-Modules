@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:55:55 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/11 11:20:13 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 13:56:27 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,10 @@ void	Harl::complain( std::string level ) {
 	};
 
 	std::string complains[4] = {
-		"debug",
-		"info",
-		"warning",
-		"error",
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR",
 	};
 	
 	for (int i = 0; i < 4; i++) {
