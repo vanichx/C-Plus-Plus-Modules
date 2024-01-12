@@ -6,13 +6,15 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:46:21 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/12 13:10:25 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:57:14 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <cerrno>   // for errno
+#include <cstring>  // for strerror
 #include "../inc/Colors.h"
 
 void printExitMsg(void) {
@@ -62,6 +64,7 @@ int main(int argc, char **argv) {
 		inFile.open(inFileName.c_str());
 		if (!inFile) {
 			std::cerr << RD "Error while opening file: " R << inFileName << std::endl;
+			std::cerr << RD "System error: " R << strerror(errno) << std::endl;
 			return (1);	
 		}
 		

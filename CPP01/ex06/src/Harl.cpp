@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 10:16:57 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/12 13:55:20 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:54:41 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,5 @@ void	Harl::complain( std::string level ) {
 			return;
 		}
 	}
-	std::cout << Y "		Level not found , try one more time..." R << std::endl;
+	std::cout << Y "		[ Probably complaining about insignificant problems ]" R << std::endl;
 }
