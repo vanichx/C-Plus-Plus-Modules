@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:33:58 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/12 10:05:25 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 12:10:01 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main()
 	// {
 	// 	Weapon myTest2 = Weapon("M16A4");
 	// 	HumanB agsm("Agent Smith");
-	// 	agsm.setWeapon(myTest2);
+	// 	agsm.setWeapon(NULL);
 	// 	agsm.attack();
 	// 	agsm.setWeapon(NULL);
 	// 	agsm.attack();
