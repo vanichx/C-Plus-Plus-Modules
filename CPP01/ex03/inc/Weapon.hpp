@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:28:39 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/11 17:24:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 09:29:50 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ class Weapon
 	private:
 		std::string _type;
 	public:
-		Weapon();
-		Weapon(const std:: string &type);
+		Weapon(std:: string type);
 		~Weapon();
 	public:
-		const std::string &getType();
-		void  setType(const std::string type);
+		std::string getType() const;
+		void  setType(std::string type);
 };
 
 #endif

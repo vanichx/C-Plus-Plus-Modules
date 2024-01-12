@@ -6,28 +6,22 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:18:48 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/11 17:24:25 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 09:30:45 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Weapon.hpp"
 
-const std::string &Weapon::getType() {
-	return(_type);
+Weapon::Weapon(std:: string type) : _type(type) {}
+
+Weapon::~Weapon() {}
+
+std::string Weapon::getType() const 
+{
+	return(this->_type);
 }
 
-void Weapon::setType(const std::string type) {
-	_type = type;
+void Weapon::setType(std::string type) {
+	this->_type = type;
 }
 
-Weapon::Weapon(const std:: string &type) {
-	setType(type);
-}
-
-Weapon::Weapon() {
-	_type = "default constructor";
-}
-
-Weapon::~Weapon() {
-	
-}

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:46:28 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/09 15:24:38 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 09:27:24 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class HumanA {
 		HumanA(std::string name, Weapon &weapons);
 		~HumanA();
 	public:
-		void attack(void);
+		void attack();
 };
 
 #endif
