@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:46:21 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/12 15:57:14 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/12 16:29:33 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int replace(std::ifstream &in, std::ofstream &out, std::string const& neededStri
 		std::cerr << RD "Error: The string to be replaced cannot be empty." R << std::endl;
 		return (1);
 	}
-	
 	while (std::getline(in, temp)) {
 		index = 0;
 		while ((index = temp.find(neededString, index)) != std::string::npos) {
@@ -44,9 +43,9 @@ int replace(std::ifstream &in, std::ofstream &out, std::string const& neededStri
 		}
 		out << temp << std::endl;
 	}
-	
 	in.close();
 	out.close();
+	
 	return (0);
 }
 
