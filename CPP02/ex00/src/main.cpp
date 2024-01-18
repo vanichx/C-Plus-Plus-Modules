@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:18:41 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/18 13:52:35 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:56:17 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main(void)
 	Fixed c;
 
 	c = b;
+
 
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;

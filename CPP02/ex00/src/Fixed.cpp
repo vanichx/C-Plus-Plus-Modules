@@ -6,27 +6,24 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:19:43 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/18 13:42:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:01:08 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Fixed.hpp"
 
-Fixed::Fixed() 
-{
-	std::cout << "Default constructor called" << std::endl;
+Fixed::Fixed() {
+	std::cout << W "Default constructor called" R << std::endl;
 	this->value = 0;
 }
 
-Fixed::Fixed(const Fixed &otherClass)
-{
-	std::cout << "Copy constructor called" << std::endl;
+Fixed::Fixed(const Fixed &otherClass) {
+	std::cout << GR "Copy constructor called" R << std::endl;
 	*this = otherClass;
 }
 
-Fixed &Fixed::operator=(const Fixed &other)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
+Fixed &Fixed::operator=(const Fixed &other) {
+	std::cout << Y "Copy assignment operator called" R << std::endl;
 	if (this != &other) {
 		this->value = other.value;
 	}
@@ -35,11 +32,11 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << RD "Destructor called" R << std::endl;
 }
 
 int Fixed::getRawBits() const {
-	std::cout << "getRawBits member function called" << std::endl;
+	std::cout << M "getRawBits member function called" R << std::endl;
 	return (this->value);
 }
 
