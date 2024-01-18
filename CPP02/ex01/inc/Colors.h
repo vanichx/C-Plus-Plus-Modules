@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   Colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 14:04:17 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/18 14:34:50 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/01/18 14:06:35 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/01/18 14:06:36 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Fixed.hpp"
+#ifndef COLOR_H
+#define COLOR_H
 
-Fixed::Fixed() {}
+#define R	"\033[0m"
+#define RD	"\033[31m"
+#define GR	"\033[32m"
+#define Y	"\033[33m"
+#define BL	"\033[34m"
+#define M	"\033[35m"
+#define W	"\033[37m"
+#define BLD "\033[1m"
 
-// Fixed::Fixed(int fixedValue) {
-	
-// }
-
-// Fixed::Fixed(float floatValue) {
-	
-// }
-
-Fixed::Fixed(const Fixed &otherClass) {
-	*this = otherClass;
-}
-
-Fixed &Fixed::operator=(const Fixed &other) {
-	if (this != &other) {
-		this->_value = other._value;
-	}
-	return (*this);
-}
-
-Fixed::~Fixed() {}
+#endif

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:19:56 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/18 13:08:59 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:27:17 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Fixed {
 	// Private variables 
 	private:
-		int value;
-		static const int ffractionalBits = 8;
+		int _value;
+		static const int _ffractionalBits = 8;
 	// Constructors ~ Destructors
 	public: 
 		Fixed();
