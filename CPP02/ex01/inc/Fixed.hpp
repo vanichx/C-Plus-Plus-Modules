@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:06:02 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/01/18 14:28:38 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/04 11:35:41 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed {
 	// Private variables 
 	private:
 		int _value;
-		static const int _ffractionalBits = 8;
+		static const int _fractionalBits = 8;
 	// Constructors ~ Destructors
 	public:
 		Fixed();
@@ -34,10 +34,8 @@ class Fixed {
 	public:
 		int		toInt(void) const;
 		float	toFloat(void) const;
-		int getRawBits(void) const;
-		void setRawBits(int const raw);
+		int		getRawBits(void) const;
+		void	setRawBits(int const raw);
 };
-
-
 
 #endif
