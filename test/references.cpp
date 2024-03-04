@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pointers.cpp                                       :+:      :+:    :+:   */
+/*   references.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 15:45:13 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/04 20:49:18 by ivanpetruni      ###   ########.fr       */
+/*   Created: 2024/03/04 20:52:29 by ivanpetruni       #+#    #+#             */
+/*   Updated: 2024/03/04 21:01:16 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-#define LOG(x) std::cout << x << std::endl
+#define LOG(x) std::cout << x << std::endl;
+
+void Increment(int& value)
+{
+    value++;
+}
 
 int main()
 {
-    char* buffer = new char[8];
+    int a = 5;
 
-    memset(buffer, 0, 8);
+    Increment(a);
 
-    char** ptr = &buffer;
+    LOG(a);
+
     
-    delete[] buffer;
 }
