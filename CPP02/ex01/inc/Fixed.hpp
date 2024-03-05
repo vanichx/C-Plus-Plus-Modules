@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:06:02 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/04 11:35:41 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/05 15:41:57 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,16 @@ class Fixed {
 	private:
 		int _value;
 		static const int _fractionalBits = 8;
-	// Constructors ~ Destructors
+	// Constructors
 	public:
-		Fixed();
-		Fixed(const Fixed& otherClass);
-		Fixed &operator=(const Fixed &other);
-		Fixed(const int fixedValue);
-		Fixed(const float floatValue);
+		Fixed(const int fixedValue); // int constr
+		Fixed(const float floatValue); // float constr
+		Fixed(); // deafult constr 
+		Fixed(const Fixed& otherClass); //  Copy constructor called
+		Fixed &operator=(const Fixed &other); // Copy assignment operator called
+		
+	// ~ Destructors
+	public:
 		~Fixed();
 	// Public Methods
 	public:
@@ -38,4 +41,5 @@ class Fixed {
 		void	setRawBits(int const raw);
 };
 
+	std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 #endif

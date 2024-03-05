@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:04:17 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/04 12:11:04 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/05 15:40:26 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ float Fixed::toFloat(void) const {
 	return ((float)this->_value / (float)(1 << this->_fractionalBits));
 }
 
-// std::ostream& operator<<(std::ostream& os, const Fixed& _value) {
-// 	// os << 
-// }
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
+	os << fixed.toFloat();
+	return os;
+}
