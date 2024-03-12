@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:44:12 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/12 15:52:32 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/12 16:55:48 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 	// Public methods
 	public:
-		void guardGate();
+		void guardGate(); // Enable guard mode
+		void attack(const std::string& target); // Attacks the enemy
 };
 
 

@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:38:50 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/10 18:20:14 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/12 16:50:41 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ClapTrap.hpp"
+#include "../inc/ScavTrap.hpp"
 
-ClapTrap::ClapTrap(){
+ClapTrap::ClapTrap() {
     this->_name = "No Name";
     this->_hit_points = 10;
     this->_energypoints = 10;
@@ -25,7 +26,7 @@ ClapTrap::ClapTrap(std::string name) {
     this->_hit_points = 10;
     this->_energypoints = 10;
     this->_attackpoints = 0;
-    std::cout << BL "String constructor called" R << std::endl;
+    std::cout << GR "String constructor called" R << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) {

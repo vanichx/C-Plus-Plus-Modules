@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:38:13 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/12 14:50:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/12 16:23:12 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class ClapTrap {
 
     // Private attributes
-    private:
+    protected:
         int _hit_points;
         int _energypoints;
         int _attackpoints;

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
+#    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/10 17:59:13 by ivanpetruni      ###   ########.fr        #
+#    Updated: 2024/03/12 16:27:55 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ OBJ_DIR = obj/
 SRC_DIR = src/
 
 SRC	=	main \
-		ClapTrap
+		ClapTrap \
+		ScavTrap
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
