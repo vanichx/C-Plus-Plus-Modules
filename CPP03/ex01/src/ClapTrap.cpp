@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:38:50 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/12 15:59:42 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:20:14 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ void ClapTrap::attack(const std::string& target) {
         std::cout << "ClapTrap " << _name << RD " is dead" R << std::cout;
         return;
     } else if (_energypoints <= 0) {
-        std::cout << "ClapTrap " << _name << RD " is out of energy points!" R << std::cout;
+        std::cout << "Clap Trap " << _name << RD " is out of energy points!" R << std::cout;
         return;
     } else {
-        std::cout << "ClapTrap " GR << this->_name << R " attacks " RD << target << R ", causing " RD << _attackpoints << R " points of damage!" << std::endl;
+        std::cout << "Clap Trap " GR << this->_name << R " attacks " RD << target << R ", causing " RD << _attackpoints << R " points of damage!" << std::endl;
         _energypoints--;
     }
 }
