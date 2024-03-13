@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
+#    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/12 16:27:55 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/03/13 21:08:36 by ivanpetruni      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME =  ClapTrap
+NAME =  FlagTrap
 
 # FILES AND PATH TO THEM
 
@@ -21,7 +21,8 @@ SRC_DIR = src/
 
 SRC	=	main \
 		ClapTrap \
-		ScavTrap
+		ScavTrap \
+		FlagTrap
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))

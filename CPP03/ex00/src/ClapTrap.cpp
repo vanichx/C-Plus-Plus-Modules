@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:38:50 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/12 15:59:42 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:12:09 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(){
     this->_hit_points = 10;
     this->_energypoints = 10;
     this->_attackpoints = 0;
-    std::cout << GR "Default constructor called" R << std::endl;
+    std::cout << GR "Default constructor for ClapTrap called" R << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) {
@@ -25,24 +25,24 @@ ClapTrap::ClapTrap(std::string name) {
     this->_hit_points = 10;
     this->_energypoints = 10;
     this->_attackpoints = 0;
-    std::cout << BL "String constructor called" R << std::endl;
+    std::cout << BL "String constructor for ClapTrap called" R << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) {
     *this = other;
-    std::cout << Y "Copy constructor called" R << std::endl;
+    std::cout << Y "Copy constructor for ClapTrap called" R << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
     this->_hit_points = other._hit_points;
     this->_energypoints = other._energypoints;
     this->_attackpoints = other._attackpoints;
-    std::cout << M "Copy assignment operator called" R << std::endl;
+    std::cout << M "Copy assignment operator for ClapTrap called" R << std::endl;
     return (*this);
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << RD "Destructor called" R << std::endl;
+    std::cout << RD "Destructor for ClapTrap called" R << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target) {

@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:59 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/13 20:32:10 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/13 21:06:53 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ ScavTrap::ScavTrap(const ScavTrap& other) {
 
 ScavTrap &ScavTrap::operator=(const ScavTrap& other) {
     this->_name = other._name;
-    this->_attackpoints = other._attackpoints;
-    this->_energypoints = other._energypoints;
     this->_hit_points = other._hit_points;
-    std::cout << M "Copy assignment operator called" R << std::endl;
+    this->_energypoints = other._energypoints;
+    this->_attackpoints = other._attackpoints;
+    std::cout << M "Copy assignment operator for ScavTrap called" R << std::endl;
     return(*this);
 }
 
 ScavTrap::~ScavTrap() {
-	 std::cout << RD BLD "Destructor for ScavTrap called" R << std::endl;
+	std::cout << RD BLD "Destructor for ScavTrap called" R << std::endl;
 }
 
 void ScavTrap::guardGate() {

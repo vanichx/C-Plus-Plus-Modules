@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 19:37:55 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/13 19:55:44 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/13 20:37:59 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@ class FlagTrap : public ClapTrap
         FlagTrap(); // Default constructor
         FlagTrap(const std::string& name); // String constructor
         FlagTrap(const FlagTrap& otherClass); // Copy constructor
+        FlagTrap &operator=(const FlagTrap& other); // Copy assigment operator
+    
     // Destructors
     public:
         ~FlagTrap();
+
     // Public methods
     public:
-        void 
+        void highFivesGuys(void); // Gives five to everybody
 };
 
 
