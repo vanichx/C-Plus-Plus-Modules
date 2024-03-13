@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:59 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/12 17:05:12 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/13 19:03:58 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ScavTrap.hpp"
 
 ScavTrap::ScavTrap() {
-	this->_name = "NoName";
-    this->_hit_points = 100;
-    this->_energypoints = 50;
-    this->_attackpoints = 20;
+	_name = "NoName";
+    _hit_points = 100;
+    _energypoints = 50;
+    _attackpoints = 20;
     std::cout << GR "Default constructor for ScavTrap called" R << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) {
 	_name = name;
     _hit_points = 100;
-    _energypoints = 10;
-    _attackpoints = 0;
+    _energypoints = 50;
+    _attackpoints = 20;
     std::cout << GR BLD "String constructor for ScavTrap called" R << std::endl;
 }
 
@@ -38,19 +38,19 @@ ScavTrap::~ScavTrap() {
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "ScavTrap " << _name << " is now in" << BL " Gate keeper " R "mode" << std::endl;
+	std::cout << "ScavTrap " BL << _name << R " is now in" << BL " Gate keeper " R "mode" << std::endl;
 }
 
 
 void ScavTrap::attack(const std::string& target) {
     if (_hit_points <= 0){
-        std::cout << "ScavTrap " << _name << RD " is dead" R << std::endl;
+        std::cout << "ScavTrap " BL << _name << RD " is dead" R << std::endl;
         return;
     } else if (_energypoints <= 0) {
-        std::cout << "ScavTrap " << _name << RD " is out of energy points!" R << std::endl;
+        std::cout << "ScavTrap " BL << _name << RD " is out of energy points!" R << std::endl;
         return;
     } else {
-        std::cout << "ScavTrap " GR << this->_name << R " attacks " RD << target << R ", causing " RD << _attackpoints << R " points of damage!" << std::endl;
+        std::cout << "ScavTrap " BL << _name << R " attacks " RD << target << R ", causing " RD << _attackpoints << R " points of damage!" << std::endl;
         _energypoints--;
     }
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:38:50 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/12 16:50:41 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/13 19:05:05 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ void ClapTrap::attack(const std::string& target) {
         std::cout << "ClapTrap " << _name << RD " is dead" R << std::cout;
         return;
     } else if (_energypoints <= 0) {
-        std::cout << "Clap Trap " << _name << RD " is out of energy points!" R << std::cout;
+        std::cout << "ClapTrap " << _name << RD " is out of energy points!" R << std::cout;
         return;
     } else {
-        std::cout << "Clap Trap " GR << this->_name << R " attacks " RD << target << R ", causing " RD << _attackpoints << R " points of damage!" << std::endl;
+        std::cout << "ClapTrap " GR << this->_name << R " attacks " RD << target << R ", causing " RD << _attackpoints << R " points of damage!" << std::endl;
         _energypoints--;
     }
 }
@@ -76,15 +76,15 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
     if (_hit_points <= 0) {
-        std::cout << "ClapTrap " << _name << RD " is dead!" R << std::endl;
+        std::cout << "ClapTrap " GR << _name << RD "  is dead!" R << std::endl;
         return;        
     }
     else if (_energypoints <= 0)
-        std::cout << "ClapTrap " << _name << Y " is out of energy points!" R << std::endl;
+        std::cout << "ClapTrap " GR << _name << R " is out of energy points!" << std::endl;
     else {
-        std::cout << "ClapTrap " << this->_name << " heals " GR << amount << R " of hit points!" << std::endl;
+        std::cout << "ClapTrap " GR << this->_name << R " heals " GR << amount << R " of hit points!" << std::endl;
         _hit_points += amount;
         _energypoints--;
-        std::cout << "ClapTrap " << this->_name << " has " BL << _hit_points << R " Hit Points remaining!" << std::endl;
+        std::cout << "ClapTrap " GR << this->_name << R " has " BL << _hit_points << R " Hit Points remaining!" << std::endl;
     }
 }
