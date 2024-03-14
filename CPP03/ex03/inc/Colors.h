@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 15:39:43 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/14 14:51:39 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/03/10 18:00:43 by ivanpetruni       #+#    #+#             */
+/*   Updated: 2024/03/10 18:00:45 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ClapTrap.hpp"
-#include "../inc/ScavTrap.hpp"
-#include "../inc/FlagTrap.hpp"
+#ifndef COLOR_H
+#define COLOR_H
 
-int main ()
-{
-	ClapTrap a("Morpheus");
-	ScavTrap b("Neo");
-    FlagTrap c("Marius");
-    
+#define R	"\033[0m"
+#define RD	"\033[31m"
+#define GR	"\033[32m"
+#define Y	"\033[33m"
+#define BL	"\033[34m"
+#define M	"\033[35m"
+#define W	"\033[37m"
+#define BLD "\033[1m"
 
-    c.highFivesGuys();
-}
+#endif

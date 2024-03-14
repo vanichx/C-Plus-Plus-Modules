@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:38:13 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/03/13 20:10:33 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/14 15:18:39 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class ClapTrap {
 
     // Private attributes
-    public:
+    protected:
         int _hit_points;
         int _energypoints;
         int _attackpoints;
