@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:10:57 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/08 17:02:34 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:18:43 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main( void ) 
 {
 
-	bsp(Point(10, 0), Point(0, 0), Point(0, 10), Point(11, 1));
+	bsp(Point(10, 0), Point(0, 0), Point(0, 10), Point(1, 1));
 
 	
 	return 0;

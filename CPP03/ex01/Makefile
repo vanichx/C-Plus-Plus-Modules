@@ -6,13 +6,13 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 09:09:48 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/12 16:27:55 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/03/15 16:15:26 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME =  ClapTrap
+NAME =  ScavTrap
 
 # FILES AND PATH TO THEM
 

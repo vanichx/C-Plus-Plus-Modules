@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:44:12 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/14 15:21:00 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/15 16:14:30 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap(); // Default constructor
 		ScavTrap(std::string name); // String constructor
 		ScavTrap(const ScavTrap& other); // Copy constructor
-        ScavTrap &operator=(const ScavTrap& other); // Copy assignment operator
+		ScavTrap &operator=(const ScavTrap& other); // Copy assignment operator
 
 	// Destructors
 	public:
