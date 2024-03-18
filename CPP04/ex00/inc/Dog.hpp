@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:22:03 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 15:17:48 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/18 20:48:33 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,18 @@
 
 class Dog : public Animal 
 {
+	// Constructors
 	public:
-		void makeSound() const;
+		Dog(); // Default constructor
+		Dog(const Dog &other); // Copy constructor
+		Dog(const std::string type); // String constructor
+		Dog &operator=(const Dog& other); // Copy assignment operator
+	// Destructors
+	public:
+		~Dog();
+	// Public Methods
+	public:
+        void makeSound() const; // method to reproduce the sound of cat/dog
 };
 
 

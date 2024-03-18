@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
+#    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/18 14:53:53 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/03/18 20:26:15 by ivanpetruni      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ OBJ_DIR = obj/
 SRC_DIR = src/
 
 SRC	=	main \
-		Animal 
+		Animal \
+		Cat \
+		Dog
 		
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))

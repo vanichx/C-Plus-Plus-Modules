@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:21:49 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 15:17:09 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/18 20:42:53 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Animal.hpp"
 
-Animal::Animal() : _type("Unknown")
+Animal::Animal() : _type("Animal")
 {
-	std::cout << "Animal default constructor for " GR << _type << R " called" << std::endl;
+	std::cout << "Animal " GR << _type << R " default constructor called" << std::endl;
 }
 
 Animal::Animal(const std::string type) : _type(type)
@@ -41,7 +41,7 @@ Animal::~Animal() {
 }
 
 void Animal::makeSound() const {
-	std::cout << "No sound because im default type" << std::endl;
+	std::cout << "Animal makes" BL " no " R "sound"  << std::endl;
 }
 
 std::string Animal::getType() const {
