@@ -6,13 +6,13 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 20:44:40 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/18 21:41:21 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Animal.hpp"
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
+#include "../inc/WrongCat.hpp"
 
 int main() 
 {
@@ -20,8 +20,8 @@ int main()
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
-	std::cout << "j = "<< j->getType() << " " << std::endl;
-	std::cout << "i = " << i->getType() << " " << std::endl;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
 	i->makeSound();
     j->makeSound();
 	meta->makeSound();
@@ -30,6 +30,16 @@ int main()
     delete j;
     delete i;
 
-	return 0;
+    const WrongAnimal* newMeta = new WrongAnimal();
+    const WrongAnimal* a = new WrongCat();
 
+    std::cout << newMeta->getType() << " " << std::endl;
+    std::cout << a->getType() << " " << std::endl;
+    newMeta->makeSound();
+    a->makeSound();
+
+    delete newMeta;
+    delete a;
+
+	return 0;
 }

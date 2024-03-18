@@ -6,7 +6,7 @@
 #    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/18 20:26:15 by ivanpetruni      ###   ########.fr        #
+#    Updated: 2024/03/18 21:35:11 by ivanpetruni      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRC_DIR = src/
 SRC	=	main \
 		Animal \
 		Cat \
-		Dog
+		Dog \
+		WrongAnimal \
+		WrongCat
 		
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
