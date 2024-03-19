@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:22:03 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 20:48:33 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/19 22:28:40 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 class Dog : public Animal 
 {
+	// Private attributes
+	private:
+        Brain* _brain;
 	// Constructors
 	public:
 		Dog(); // Default constructor
@@ -29,7 +32,7 @@ class Dog : public Animal
 		~Dog();
 	// Public Methods
 	public:
-        void makeSound() const; // method to reproduce the sound of cat/dog
+		void makeSound() const; // method to reproduce the sound of cat/dog
 };
 
 

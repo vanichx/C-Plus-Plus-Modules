@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:22:01 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 20:48:25 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/19 22:28:13 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 class Cat : public Animal
 {
+    // Private attributes
+    private:
+        Brain* _brain;
 	// Constructors
 	public:
 		Cat(); // Default constructor

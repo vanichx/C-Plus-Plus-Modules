@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 21:41:21 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/19 23:19:56 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,47 @@
 
 int main() 
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-    j->makeSound();
-	meta->makeSound();
+    Animal* array[4];
 
-    delete meta;
-    delete j;
-    delete i;
+    for (int i = 0; i < 4; i++) {
+        if (i % 2 == 0) {
+            array[i] = new Dog();
+        } else {
+            array[i] = new Cat();
+        }
+    }
 
-    const WrongAnimal* newMeta = new WrongAnimal();
-    const WrongAnimal* a = new WrongCat();
+    for (int i = 0; i < 4; i++) {
+        delete array[i];
+    }
 
-    std::cout << newMeta->getType() << " " << std::endl;
-    std::cout << a->getType() << " " << std::endl;
-    newMeta->makeSound();
-    a->makeSound();
+    return (0);
+    
+	// const Animal* meta = new Animal();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
 
-    delete newMeta;
-    delete a;
+	// std::cout << j->getType() << " " << std::endl;
+	// std::cout << i->getType() << " " << std::endl;
+	// i->makeSound();
+    // j->makeSound();
+	// meta->makeSound();
 
-	return 0;
+    // delete meta;
+    // delete j;
+    // delete i;
+
+    // const WrongAnimal* newMeta = new WrongAnimal();
+    // const WrongAnimal* a = new WrongCat();
+
+    // std::cout << newMeta->getType() << " " << std::endl;
+    // std::cout << a->getType() << " " << std::endl;
+    // newMeta->makeSound();
+    // a->makeSound();
+
+    // delete newMeta;
+    // delete a;
+
+	// return 0;
 }

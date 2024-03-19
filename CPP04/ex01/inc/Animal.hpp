@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:21:59 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/18 20:48:08 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/19 22:27:53 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <iomanip>
 #include <iostream>
 #include "Colors.h"
+#include "Brain.hpp"
 
 
 class Animal
