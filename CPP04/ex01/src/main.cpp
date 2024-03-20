@@ -6,16 +6,19 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:34:08 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/20 15:12:25 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
 #include "../inc/WrongCat.hpp"
+#include <cstdio>
 
 int main() 
 {
+	// Animal b;
+	// std::cout << "Animal type: " << b.getType() << std::endl;
 
     Animal* array[4];
 
@@ -26,11 +29,9 @@ int main()
             array[i] = new Cat();
         }
     }
-
     for (int i = 4; i >= 0 ; i--) {
         delete array[i];
     }
-
     return (0);
     
 	// const Animal* meta = new Animal();

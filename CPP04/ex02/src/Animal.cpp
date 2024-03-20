@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:21:49 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:55:41 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/20 14:07:03 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ Animal::~Animal() {
 	std::cout << "Animal default destructor called" << std::endl;
 }
 
-void Animal::makeSound() const {
-	std::cout << "Animal makes" BL " no " R "sound"  << std::endl;
-}
+
 
 std::string Animal::getType() const {
 	return (this->_type);

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:21:52 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:35:13 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/20 15:10:10 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,22 @@ Cat::Cat(const std::string type)
 
 Cat::Cat(const Cat &other)
 {
-	*this = other;
-	_brain = new Brain(*(other._brain));
-	std::cout << "Cat copy constructor for " GR << this->_type << R " called" << std::endl;
+    std::cout << "Cat copy constructor for " << this->_type << " called" << std::endl;
+    _type = other._type;
+    _brain = new Brain(*other._brain); // Deep copy of the Brain object
 }
 
-Cat &Cat::operator=(const Cat& other) {
-	std::cout << "Cat copy assignment operator for " << _type << " called" R << std::endl;
-	if (this != &other)
+Cat& Cat::operator=(const Cat& cat) {
+    if (this != &cat) 
 	{
-		this->_type = other._type;
-		delete this->_brain;
-		this->_brain = new Brain(*(other._brain));
-	}
-	return (*this);
+        delete _brain;
+        _brain = new Brain(*cat._brain);
+        _type = cat._type;
+        std::cout << "Cat assignment operator called!" << std::endl;
+    }
+    return *this;
 }
+
 
 Cat::~Cat() {
 	std::cout << "Cat destructor for " RD << _type << R " called" << std::endl;
@@ -52,3 +53,9 @@ Cat::~Cat() {
 void Cat::makeSound() const {
 	std::cout << "Cat makes " BL "Meow!" R << std::endl;
 }
+
+// #include <cstdio>
+
+// void Cat::printBrain() const {
+// 	printf("Cat's brain address: %p\n", _brain);
+// }

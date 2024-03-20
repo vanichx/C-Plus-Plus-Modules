@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:21:59 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/19 22:27:53 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/20 13:04:46 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Animal
 		virtual ~Animal();
 	// Public Methods
 	public:
-		virtual void makeSound() const; // method to reproduce the sound of cat/dog
+		virtual void makeSound() const = 0; // Pure virtual method
 		std::string getType() const;
 };
 

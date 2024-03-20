@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:21:54 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:35:17 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/20 15:09:59 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,20 @@ Dog::Dog(const std::string type)
 
 Dog::Dog(const Dog &other)
 {
-	*this = other;
-	_brain = new Brain(*(other._brain));
-	std::cout << "Dog copy constructor for " GR << this->_type << R " called" << std::endl;
+	std::cout << "Dog copy constructor for " << this->_type << " called" << std::endl;
+	_type = other._type;
+	_brain = new Brain(*other._brain); // Deep copy of the Brain object
 }
 
-Dog &Dog::operator=(const Dog& other) {
-	std::cout << "Dog copy assignment operator for " << _type << " called" R << std::endl;
-	if (this != &other)
+Dog& Dog::operator=(const Dog& dog) {
+	if (this != &dog) 
 	{
-		this->_type = other._type;
-		delete this->_brain;
-		this->_brain = new Brain(*(other._brain));
+		delete _brain; // Delete the old Brain
+		_brain = new Brain(*dog._brain); // Deep copy of the Brain object
+		_type = dog._type;
+		std::cout << "Dog assignment operator called!" << std::endl;
 	}
-	return (*this);
+	return *this;
 }
 
 Dog::~Dog() {
@@ -52,3 +52,9 @@ Dog::~Dog() {
 void Dog::makeSound() const {
 	std::cout << "Dog makes " BL "Woof!" R << std::endl;
 }
+
+// #include <cstdio>
+
+// void Dog::printBrain() const {
+// 	printf("Dog's brain address: %p\n", _brain);
+// }

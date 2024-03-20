@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:58:28 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:35:09 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/20 14:14:34 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Brain::Brain(const Brain& other) {
 Brain &Brain::operator=(const Brain& other) {
 	std::cout << "Brain copy assigment" BL " operator " R "called" << std::endl;
 	if (this != &other) {
-		for (int i = 0; i < 100; ++i) {
+		for (int i = 0; i <= 100; ++i) {
 			_ideas[i] = other._ideas[i];
 		}
 	}
