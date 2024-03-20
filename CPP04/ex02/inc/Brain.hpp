@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:53:59 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:34:45 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/19 22:39:27 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 class Brain
 {
 	// Public atributes
-	public:
-		std::string _ideas[100];
-	// Constructors
-	public:
-		Brain(); // Default constructor
-		Brain(const Brain& other); // Copy constructor
-		Brain &operator=(const Brain& other); // Copy assigment operator
-	// Destructors
-	public:
-		~Brain();
+    public:
+	    std::string _ideas[100];
+    // Constructors
+    public:
+        Brain(); // Default constructor
+        Brain(const Brain& other); // Copy constructor
+        Brain &operator=(const Brain& other); // Copy assigment operator
+    // Destructors
+    public:
+        ~Brain();
 	
 };
 

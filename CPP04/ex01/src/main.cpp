@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/19 23:19:56 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/03/20 12:34:08 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 
     Animal* array[4];
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i <= 4; i++) {
         if (i % 2 == 0) {
             array[i] = new Dog();
         } else {
@@ -27,7 +27,7 @@ int main()
         }
     }
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 4; i >= 0 ; i--) {
         delete array[i];
     }
 

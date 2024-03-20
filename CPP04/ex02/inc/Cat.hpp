@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 14:22:03 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 12:34:51 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/03/18 14:22:01 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/03/19 22:28:13 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
 #include "Animal.hpp"
 
 
-class Dog : public Animal 
+class Cat : public Animal
 {
-	// Private attributes
-	private:
-		Brain* _brain;
+    // Private attributes
+    private:
+        Brain* _brain;
 	// Constructors
 	public:
-		Dog(); // Default constructor
-		Dog(const Dog &other); // Copy constructor
-		Dog(const std::string type); // String constructor
-		Dog &operator=(const Dog& other); // Copy assignment operator
+		Cat(); // Default constructor
+		Cat(const Cat &other); // Copy constructor
+		Cat(const std::string type); // String constructor
+		Cat &operator=(const Cat& other); // Copy assignment operator
 	// Destructors
 	public:
-		~Dog();
+		~Cat();
 	// Public Methods
 	public:
 		void makeSound() const; // method to reproduce the sound of cat/dog
