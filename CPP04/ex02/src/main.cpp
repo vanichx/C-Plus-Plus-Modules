@@ -6,13 +6,16 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/20 15:24:48 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/21 15:08:14 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
 #include "../inc/WrongCat.hpp"
+
+
+using namespace std;
 
 int main() 
 {		
@@ -28,10 +31,6 @@ int main()
     }
 
 	// array[0]->makeSound();
-
-	Dog dog1("Dog1");
-	std::cout << "hi" << std::endl;
-	Dog dog2(dog1);
 
     for (int i = 0; i < 4; i++) {
         delete array[i];
