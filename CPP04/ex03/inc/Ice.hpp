@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:11:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/21 18:16:59 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/21 18:29:47 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Ice : public AMateria
 	// Public methods
 	public:
 		Ice* clone() const;
-		// virtual void use(ICharacter& target);
+		void use(ICharacter& target);
 };
 
 

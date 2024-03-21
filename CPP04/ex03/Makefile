@@ -6,7 +6,7 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/21 16:57:24 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/03/21 18:39:10 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,10 @@ OBJ_DIR = obj/
 SRC_DIR = src/
 
 SRC	=	main \
-		AMateria
-		
+		AMateria \
+		Ice \
+		Cure 
+
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:11:48 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/21 18:17:16 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/21 18:29:56 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Cure : public AMateria
 	// Public methods
 	public:
 		Cure* clone() const;
-		// virtual void use(ICharacter& target);
+		void use(ICharacter& target);
 };
 
 #endif

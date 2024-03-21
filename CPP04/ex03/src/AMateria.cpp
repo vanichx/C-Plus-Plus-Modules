@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:56:04 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/21 17:25:10 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/21 18:55:55 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ AMateria::~AMateria() {
 
 std::string const &AMateria::getType() const {
 	return (this->_type);
+}
+
+void AMateria::use(ICharacter& target)
+{
+	(void)target;
 }

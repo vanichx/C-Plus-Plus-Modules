@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:55:52 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/21 18:26:47 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:09:01 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 #include <iomanip>
 #include <iostream>
 #include "Colors.h"
+#include "ICharacter.hpp"
 
+class Icharacter;
 
 class AMateria
 {
@@ -32,7 +34,7 @@ class AMateria
 		AMateria &operator=(const AMateria& other); // Assigment operator
 	// Destructors
 	public:
-		~AMateria();
+		virtual ~AMateria();
 	// Public methods
 		std::string const & getType() const; //Returns the materia type
 		virtual AMateria* clone() const = 0;
