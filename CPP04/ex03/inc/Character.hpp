@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/21 17:27:46 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/03/21 18:23:48 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/03/21 18:25:56 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/AMateria.hpp"
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
 
-int main() 
-{		
-	// AMateria a("Cold");
-	// AMateria b("Hot");
-	// AMateria c;
-	// AMateria d;
+#include "AMateria.hpp"
 
-	// d = a;
-
-	// std::cout << a.getType() << std::endl;
-
-
-	// AMateria a = new AMateria("Hey");
-   return (0);
+class ICharacter
+{
+	public: 
+		virtual ~ICharacter() {}
+		virtual std::string const & getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 }
+
+
+#endif

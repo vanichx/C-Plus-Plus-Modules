@@ -6,7 +6,7 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/20 13:58:45 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/03/21 16:57:24 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ NAME = AMateria
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	main
+SRC	=	main \
+		AMateria
 		
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
