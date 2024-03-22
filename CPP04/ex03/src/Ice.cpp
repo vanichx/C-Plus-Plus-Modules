@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:11:33 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/21 19:09:56 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/22 11:59:38 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Ice& Ice::operator=(const Ice & other)
 }
 
 Ice::~Ice() {
-	std::cout << RD "Ice" R " Default destructor called" << std::endl;
+	std::cout << RD "Ice" R " Default destructor called" << std::endl;		
 }
 
 Ice *Ice::clone() const {

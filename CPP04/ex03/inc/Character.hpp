@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 15:55:52 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 12:17:32 by ipetruni         ###   ########.fr       */
+/*   Created: 2024/03/22 12:08:55 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/03/22 12:46:23 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-#define AMATERIA_HPP
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
-#include <string>
 #include <iomanip>
 #include <iostream>
-#include "Colors.h"
+#include <string>
 #include "ICharacter.hpp"
 
-class Icharacter;
 
-class AMateria
+class Character : public ICharacter
 {
-	// Protected attributes
 	protected:
-		std::string _type;
+		std::string _nameCharacter; 
 	// Constructors
 	public:
-		AMateria(); // Default constructor
-		AMateria(std::string const & type); // String constructor
-		AMateria(const AMateria & other); // Copy constructor
-		AMateria &operator=(const AMateria& other); // Assigment operator
+		Character(); // Default constructor
+		Character(std::string const & name); // String constructor
+		Character(const Character & otherCharacter); // Copy constructor with deep copy
+		Character &operator=(const Character & other); // Assigment operator
 	// Destructors
 	public:
-		virtual ~AMateria();
+		~Character();
 	// Public methods
-		std::string const & getType() const; //Returns the materia type
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		std::string const & getName() const;
+		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
+	
 };
 
 
