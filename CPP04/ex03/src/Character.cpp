@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 12:25:34 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 13:20:41 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/22 16:24:47 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,29 @@ std::string const & Character::getName() const {
 }
 
 void Character::equip(AMateria* m) {
-	/////// NEED TO DO
-	(void)m;
+	for (int i = 0; i < 4; i++) {
+		if (_equipment[i] == NULL) {
+			_equipment[i] = m->clone();
+			return;
+		}
+	}
+	std::cout << "Can't add new Materia to equipment , all slots are busy" << std::endl;
 }
+
 void Character::unequip(int idx) {
 	/////// NEED TO DO
 	(void)idx;
 }
 
 void Character::use(int idx, ICharacter& target) {
-	/////// NEED TO DO
-	(void)idx;
-	(void)target;
+	if (idx < 4) {
+		if (_equipment[idx]->getType() == "ice") {
+			std::cout << "* shoots an ice bolt at " RD << target.getName() << R " *" << std::endl;
+		} else if (_equipment[idx]->getType() == "cure") {
+			std::cout << "* heals " GR <<  target.getName()  << "'s" R " wounds *" << std::endl;
+		}
+	} else {
+		std::cout << "Index should be in this range 0..3" << std::endl;
+	}
 }
 
