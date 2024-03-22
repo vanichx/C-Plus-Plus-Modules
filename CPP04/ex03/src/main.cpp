@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:19:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 16:25:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:43:11 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,50 +20,6 @@
 
 int main() 
 {
-	// AMateria* first = new Ice();
-	// AMateria* second = new Cure();
-
-	// std::cout << "first type is " << first->getType() << std::endl;
-	// std::cout << "second type is " << second->getType() << std::endl;
-	
-	// Ice a;
-	// Cure b;
-
-	// std::cout << "a.type is " << a.getType() << std::endl;
-	// std::cout << "b.type is " << b.getType() << std::endl;
-	
-	
-	// Ice c;
-
-	// AMateria *third = c.clone();
-
-	// IMateriaSource* src  = new MateriaSource();
-
-	// src->learnMateria(new Ice());
-
-	// ICharacter* bob = new Character("bob");
-
-	// bob->getName();
-
-	
-
-	// Character on;
-
-	// std::cout << on.getName() << std::endl;
-
-	// delete first;
-	// delete second;
-	// delete third;
-
-
-
-	// IMateriaSource* src = new MateriaSource();
-	// src->learnMateria(new Ice());
-	// src->learnMateria(new Cure());
-
-	// delete src;
-
-
 	IMateriaSource* src = new MateriaSource();
 	
 	src->learnMateria(new Ice());
@@ -75,18 +31,20 @@ int main()
 	
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	delete tmp;
+	// tmp = src->createMateria("cure");
+	// me->equip(tmp);
+	// delete tmp;
 	
 	ICharacter* bob = new Character("bob");
-	// std::cout << "Hi      " << std::endl;
 	
 	me->use(0, *bob);
-	me->use(1, *bob);
+	// me->use(1, *bob);
 	
-	delete bob;
-	delete me;
-	delete src;
+	// // delete tmp;
+	// delete src;
+	// delete me;
+	// delete bob;
 
    return (0);
 }

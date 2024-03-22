@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 12:08:55 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 16:23:27 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/22 18:17:37 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,13 @@ class Character : public ICharacter
 		~Character();
 	// Public methods
 		std::string const & getName() const;
+		void setName(std::string name);
+		void initEquipment(AMateria* materia);
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
 };
+
 
 
 
