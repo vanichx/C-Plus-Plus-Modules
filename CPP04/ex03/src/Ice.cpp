@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:11:33 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 19:49:02 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 14:52:23 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 Ice::Ice() {
 	_type = "ice";
-	// std::cout << GR "Ice" R " Default constructor called" << std::endl;
+	std::cout << GR "Ice" R " Default constructor called" << std::endl;
 }
 
 Ice::Ice(std::string const & type) {
 	_type = type;
 	_type = "ice";
-	// std::cout << BL "Ice" R " String constructor called" << std::endl;
+	std::cout << BL "Ice" R " String constructor called" << std::endl;
 }
 
 Ice::Ice(const Ice & other) {
 	*this = other;
-	// std::cout << Y "Ice" R " Copy constructor called" << std::endl;
+	std::cout << Y "Ice" R " Copy constructor called" << std::endl;
 }
 
 
 Ice& Ice::operator=(const Ice & other)
 {
-	// std::cout << M "Ice" R " Copy assigment operator called" << std::endl;
+	std::cout << M "Ice" R " Copy assigment operator called" << std::endl;
 	if (this != &other)
 	{
 		_type = other.getType();
@@ -40,7 +40,7 @@ Ice& Ice::operator=(const Ice & other)
 }
 
 Ice::~Ice() {
-	// std::cout << RD "Ice" R " Default destructor called" << std::endl;
+	std::cout << RD "Ice" R " Default destructor called" << std::endl;
 }
 
 Ice *Ice::clone() const {

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:28:49 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 19:27:59 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 14:52:36 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ MateriaSource::MateriaSource() : _numLearnedMaterias(0) {
 	for (int i  = 0; i < 4; i++) {
 		_learnedMaterias[i] = NULL;
 	}
-	// std::cout << GR "MateriaSource" R " Default constructor called" << std::endl;
+	std::cout << GR "MateriaSource" R " Default constructor called" << std::endl;
 }
 
 
@@ -24,13 +24,13 @@ MateriaSource::MateriaSource(const MateriaSource & other) : _numLearnedMaterias(
 	for (int i = 0; i < _numLearnedMaterias; i++) {
 		_learnedMaterias[i] = other._learnedMaterias[i]->clone();
 	}
-	// std::cout << Y "MateriaSource" R " Copy constructor called" << std::endl;
+	std::cout << Y "MateriaSource" R " Copy constructor called" << std::endl;
 }
 
 
 MateriaSource& MateriaSource::operator=(const MateriaSource & other)
 {
-	// std::cout << M "MateriaSource" R " Copy assigment operator called" << std::endl;
+	std::cout << M "MateriaSource" R " Copy assigment operator called" << std::endl;
 	if (this != &other)
 	{
 		for (int i = 0; i < _numLearnedMaterias; i++) {
@@ -47,7 +47,7 @@ MateriaSource::~MateriaSource() {
 	for (int i = 0; i < _numLearnedMaterias; i++) {
 		delete _learnedMaterias[i];
 	}
-	// std::cout << RD "MateriaSource" R " Default destructor called" << std::endl;		
+	std::cout << RD "MateriaSource" R " Default destructor called" << std::endl;		
 }
 
 void MateriaSource::learnMateria(AMateria* materia) {
