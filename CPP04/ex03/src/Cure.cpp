@@ -6,25 +6,19 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:12:16 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/24 14:54:32 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:08:20 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cure.hpp"
 
-Cure::Cure() {
+Cure::Cure() : AMateria("cure") {
 	_type = "cure";
 	std::cout << GR "Cure" R " Default constructor called" << std::endl;
 }
 
-Cure::Cure(std::string const & type) {
-	_type = type;
-	_type = "cure";
-	std::cout << BL "Cure" R " String constructor called" << std::endl;
-}
-
-Cure::Cure(const Cure & other) {
-	*this = other;
+Cure::Cure(const Cure & otherMateria) : AMateria(otherMateria.getType()) {
+	this->_type = otherMateria.getType();
 	std::cout << Y "Cure" R " Copy constructor called" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:11:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/22 19:47:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:06:58 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Ice : public AMateria
 	// Constructors
 	public:
 		Ice(); // Default constructor 
-		Ice(std::string const & type); // String constructor
 		Ice(const Ice & other); // Copy constructor
 		Ice &operator=(const Ice& other); // Assigment operator
 	// Destructors

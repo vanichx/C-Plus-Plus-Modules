@@ -6,24 +6,28 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:28:49 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/24 14:52:36 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 17:11:12 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/MateriaSource.hpp"
 
-MateriaSource::MateriaSource() : _numLearnedMaterias(0) {
+MateriaSource::MateriaSource() {
 	for (int i  = 0; i < 4; i++) {
-		_learnedMaterias[i] = NULL;
+		_learnedMaterias[i] = 0;
 	}
+	_numLearnedMaterias = 0;
 	std::cout << GR "MateriaSource" R " Default constructor called" << std::endl;
 }
 
 
-MateriaSource::MateriaSource(const MateriaSource & other) : _numLearnedMaterias(other._numLearnedMaterias) {
-	for (int i = 0; i < _numLearnedMaterias; i++) {
-		_learnedMaterias[i] = other._learnedMaterias[i]->clone();
-	}
+MateriaSource::MateriaSource(const MateriaSource & other) {
+	for (int i = 0; i < 4; i++) {
+		if (other._learnedMaterias[i])
+			this->_learnedMaterias[i] = (other._learnedMaterias[i])->clone();
+        else
+            this->_learnedMaterias[i] = 0;
+    }
 	std::cout << Y "MateriaSource" R " Copy constructor called" << std::endl;
 }
 
@@ -34,40 +38,59 @@ MateriaSource& MateriaSource::operator=(const MateriaSource & other)
 	if (this != &other)
 	{
 		for (int i = 0; i < _numLearnedMaterias; i++) {
-			delete _learnedMaterias[i];						// Deleting exsting materias before assigning
-		}
-		for (int i = 0; i < _numLearnedMaterias; i++) {
-			_learnedMaterias[i] = other._learnedMaterias[i]; // Copy the learned materias
+			if (this->_learnedMaterias[i]) {
+				delete this->_learnedMaterias[i];
+                this->_learnedMaterias[i] = 0;
+			}
+			if (other._learnedMaterias[i])
+				this->_learnedMaterias[i] = other._learnedMaterias[i]->clone();
+			else
+				this->_learnedMaterias[i] = 0;
 		}
 	}
 	return *this;
 }
 
 MateriaSource::~MateriaSource() {
-	for (int i = 0; i < _numLearnedMaterias; i++) {
-		delete _learnedMaterias[i];
+
+	// std::cout << "Learned materias : " << _numLearnedMaterias << std::endl;	
+	
+	for (int i = 0; i < 4; i++) {
+		// if (_learnedMaterias[i]) {
+		// 	std::cout << "Address [i] " << i << ":" << _learnedMaterias[i] << std::endl;
+		// 	std::cout << "Type of materia :" << _learnedMaterias[i]->getType() << std::endl;
+		// }
+		if (_learnedMaterias[i])
+			delete _learnedMaterias[i];
+		_learnedMaterias[i] = 0;
 	}
-	std::cout << RD "MateriaSource" R " Default destructor called" << std::endl;		
+	// delete [] _learnedMaterias;
+	std::cout << RD "MateriaSource" R " Default destructor called" << std::endl;
 }
+
 
 void MateriaSource::learnMateria(AMateria* materia) {
 
-	if (materia) {
-		if (_numLearnedMaterias <= 4) {
-			_learnedMaterias[_numLearnedMaterias++] = materia->clone();
-		} else {
-			std::cout << "Cannot learn more Materias. MateriaSource is full." << std::endl;
+	if (!materia) {
+		std::cout << "Your AMateria is empty , can't learn new Materia" << std::endl;
+		return;
+	}
+	for (int i = 0; i < 4; i++) {
+		if (!this->_learnedMaterias[i]) {
+			this->_learnedMaterias[i] = materia;
+			std::cout << _learnedMaterias[i]->getType() << " Materia learned" << std::endl;
+			_numLearnedMaterias++;
 			return;
 		}
-	} else {
-		std::cout << "Your AMateria is empty , can't learn new Materia" << std::endl;
 	}
+	std::cout << "Cannot learn more than 4 Materias..." << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
+	
 	if (type.compare("ice") == false || type.compare("cure") == false) {
 		if (_numLearnedMaterias <= 4) {
-			for (int i = 0; i < _numLearnedMaterias; i++) {
+			for (int i = 0; i < 4; i++) {
 				if (_learnedMaterias[i]->getType() == type) {
 					return (_learnedMaterias[i]->clone());
 				}

@@ -6,28 +6,21 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:11:33 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/24 14:52:23 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:41:31 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Ice.hpp"
 
-Ice::Ice() {
-	_type = "ice";
+Ice::Ice() : AMateria("ice") {
+	this->_type = "ice";
 	std::cout << GR "Ice" R " Default constructor called" << std::endl;
 }
 
-Ice::Ice(std::string const & type) {
-	_type = type;
-	_type = "ice";
-	std::cout << BL "Ice" R " String constructor called" << std::endl;
-}
-
-Ice::Ice(const Ice & other) {
-	*this = other;
+Ice::Ice(const Ice & otherMateria) : AMateria(otherMateria.getType()) {
+	this->_type = otherMateria.getType();
 	std::cout << Y "Ice" R " Copy constructor called" << std::endl;
 }
-
 
 Ice& Ice::operator=(const Ice & other)
 {
@@ -50,3 +43,9 @@ Ice *Ice::clone() const {
 void Ice::use(ICharacter& target) {
 	std::cout << "* shoots an ice bolt at " BL << target.getName() <<  R " *" << std::endl;
 }
+
+
+
+
+
+
