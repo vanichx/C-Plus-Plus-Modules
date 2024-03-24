@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 12:25:34 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/24 17:04:20 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 17:38:47 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Character::Character(std::string const & name) {
 
 Character::Character(const Character & otherCharacter) {
 	*this = otherCharacter;
-
 	// std::cout << Y "Character" R " copy constructor called" << std::endl;
 }
 
@@ -48,13 +47,12 @@ Character &Character::operator=(const Character & other) {
 }
 
 Character::~Character() {
+	// std::cout << RD "Character" R " default destructor called" << std::endl;
 	for(int i = 0; i < 4; i++) {
 		if (_equipment[i])
 			delete _equipment[i];
 		_equipment[i] = 0;
 	}
-	// delete [] _equipment;
-	// std::cout << RD "Character" R " default destructor called" << std::endl;
 }
 
 std::string const & Character::getName() const {
@@ -65,8 +63,6 @@ void Character::equip(AMateria* m) {
 	if (m) {
 		for (int i = 0; i < 4; i++) {
 			if (_equipment[i] == NULL) {
-				// if (_equipment[i])
-				// 	delete _equipment[i];
 				_equipment[i] = m->clone();
 				// std::cout << "Equiped with " Y << _equipment[i]->getType() << R " Materia" << std::endl;
 				return;

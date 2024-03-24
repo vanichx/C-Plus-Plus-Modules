@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:56:04 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/24 16:05:12 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/24 17:37:39 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ AMateria::AMateria(const AMateria & other) : _type(other._type) {
 }
 
 
-AMateria& AMateria::operator=(const AMateria & other)
-{
+AMateria& AMateria::operator=(const AMateria & other) {
 	// std::cout << M "AMateria" R " Copy assigment operator called" << std::endl;
 	if (this != &other)
 	{
