@@ -6,7 +6,7 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/03/28 14:25:16 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/03/29 11:42:55 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,7 @@ OBJ_DIR = obj/
 SRC_DIR = src/
 
 SRC	=	main \
-		Animal \
-		Cat \
-		Dog \
-		WrongAnimal \
-		WrongCat
+		Bureaucrat
 		
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
