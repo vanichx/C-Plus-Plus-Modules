@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:25:45 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/29 16:30:17 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/29 17:21:57 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 int main() 
 {
 
+	Bureaucrat num1("Erik", 10);
+
 	Form a;
 	Form b(a);
 
@@ -23,5 +25,10 @@ int main()
 
 	std::cout << a << std::endl;
 
+	a.beSigned(num1);
+
 	return 0;
 }
+
+
+// Need to throw proper exception 

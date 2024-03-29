@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:55:27 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/29 17:11:00 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/03/29 17:19:55 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 #include <exception>
 #include "Colors.h"
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
