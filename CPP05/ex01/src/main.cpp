@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:25:45 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/29 17:21:57 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/01 14:12:40 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@
 int main() 
 {
 
-	Bureaucrat num1("Erik", 10);
+	Bureaucrat num1("Erik", 100);
 
-	Form a;
-	Form b(a);
-
-	a = b;
+	Form a("42 Agreement");
 
 	std::cout << a << std::endl;
 
-	a.beSigned(num1);
+	try {
+		a.beSigned(num1);
+		num1.signForm(a);
+	}
+	catch (std::exception &ex) {
+		std::cout << ex.what() << std::endl;
+	}
 
 	return 0;
 }

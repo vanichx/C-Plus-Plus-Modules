@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:26:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/03/29 17:09:07 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/01 14:09:13 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,14 @@ std::string Bureaucrat::getName() const {
 
 void Bureaucrat::signForm(const Form & form) {
 	if (form.getSignedStatus() == true) {
-		std::cout << getName() << " signed " << form.getName() << std::endl;
+		std::cout << getName() << " signed " GR BLD << form.getName() << R " form, congrats!" << std::endl;
 	} else {
 		std::cout << "couldn't sign" << form.getName() << " because ";
-		if (form.getGradeToSign() > getGrade()) {
+		if (form.getGradeToSign() < getGrade()) {
 			std::cout << "grade to sign is bigger than current grade" << std::endl;
+		}
+		else {
+			std::cout << "unknown reason sorry" << std::endl;
 		}
 	}
 }
