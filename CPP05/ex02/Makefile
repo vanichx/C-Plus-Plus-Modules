@@ -6,7 +6,7 @@
 #    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/04/01 18:26:16 by ivanpetruni      ###   ########.fr        #
+#    Updated: 2024/04/01 19:11:01 by ivanpetruni      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC	=	main \
 		Bureaucrat \
 		AForm \
 		PresidentialPardonForm \
+		RobotomyRequestForm \
 		ShrubberyCreationForm
 
 
