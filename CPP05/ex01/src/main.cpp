@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:25:45 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/02 14:51:32 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/02 18:11:16 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main() 
 {
 
-	Bureaucrat num1("Erik", 100);
+	Bureaucrat num1("Erik", 50);
 
 	Form a("42 Agreement");
 

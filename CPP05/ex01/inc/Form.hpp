@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:55:27 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/01 14:05:21 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/02 17:53:03 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Form
 	public:
 		Form(); // Default constructor
 		Form(const Form & other); // Copy constructor
-        Form(const std::string & name); // String constructor
+		Form(const std::string & name); // String constructor
 		Form &operator=(const Form & other); // Assigment operator
 
 	// Destructors

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:55:35 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/01 14:09:42 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/02 17:59:22 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void Form::beSigned(const Bureaucrat & bureaucrat) {
 
 const char *Form::GradeTooLowException::what() const throw()
 {
-	return ("Sorry the form cannot be signed , due to low grade of the bureaucrat , min grade is" RD " 75" R);
+	return ("Sorry the form cannot be signed , due to low grade of the bureaucrat" R);
 }
 
 std::ostream &operator<<(std::ostream &stream, const Form& form) {
