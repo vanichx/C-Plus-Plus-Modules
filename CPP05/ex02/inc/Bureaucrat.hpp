@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:26:36 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/01 16:03:58 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/02 17:51:32 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ class Bureaucrat
 	// Public Grade modification methods
 		void		incrementGrade();
 		void		decrementGrade();
+
 	// Exception classes
 	public:
 		class GradeTooHighException : public std::exception {
