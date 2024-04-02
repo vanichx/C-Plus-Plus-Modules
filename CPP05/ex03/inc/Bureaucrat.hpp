@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:26:36 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/02 17:51:40 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/02 18:32:12 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Bureaucrat
 		int 		getGrade() const; // Getter for the grade
 
 	// Pubclic method for Form class
-		void		signForm(const AForm & form);
+		void		signForm(AForm & form);
 
 	// Public Grade modification methods
 		void		incrementGrade();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 14:26:24 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/01 16:03:49 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/02 18:33:32 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,18 +71,18 @@ std::string Bureaucrat::getName() const {
 	return (_name);
 }
 
-void Bureaucrat::signForm(const AForm & Aform) {
-	if (Aform.getSignedStatus() == true) {
-		std::cout << getName() << " signed " GR BLD << Aform.getName() << R " Aform, congrats!" << std::endl;
-	} else {
-		std::cout << "couldn't sign" << Aform.getName() << " because ";
-		if (Aform.getGradeToSign() < getGrade()) {
-			std::cout << "grade to sign is bigger than current grade" << std::endl;
-		}
-		else {
-			std::cout << "unknown reason sorry" << std::endl;
-		}
+void Bureaucrat::signForm(AForm & form) {
+	try
+	{
+		form.beSigned(*this);
 	}
+	catch(const std::exception& e)
+	{
+		std::cerr << GR << _name << R << " couldn't sign form '" << R << form.getName() << Y << "' because "; 
+		std::cerr << e.what() << '\n';
+		return ;
+	}
+	std::cout << GR << _name << R << " signed '" << Y << form.getName() << R << "' form" << R << std::endl;
 }
 
 

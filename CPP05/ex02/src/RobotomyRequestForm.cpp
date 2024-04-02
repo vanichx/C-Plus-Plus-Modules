@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 19:05:04 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/01 19:20:04 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/02 18:34:18 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 		throw ExecutionFailExecption();
 	} else {
 		std::cout << Y "Drilling noises ..." R << std::endl;
+		srand(time(NULL));
 		if (rand() % 2) {
 			std::cout << "Unfortunately the robotomy" RD BLD " failed, " R "try one more time please." << std::endl;
 		} else {
