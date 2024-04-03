@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/29 15:55:27 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/01 17:34:21 by ivanpetruni      ###   ########.fr       */
+/*   Created: 2024/04/03 14:07:13 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/04/03 14:07:15 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

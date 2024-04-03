@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/01 15:51:08 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/01 18:56:53 by ivanpetruni      ###   ########.fr       */
+/*   Created: 2024/04/03 14:06:09 by ipetruni          #+#    #+#             */
+/*   Updated: 2024/04/03 14:06:11 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
