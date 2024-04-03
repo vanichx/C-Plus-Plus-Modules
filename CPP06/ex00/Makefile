@@ -6,27 +6,20 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/04/02 15:57:01 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/04/03 14:08:59 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME = Intern
+NAME =  ScalarConverter
 
 # FILES AND PATH TO THEM
 
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	main \
-		Bureaucrat \
-		AForm \
-		ShrubberyCreationForm \
-		RobotomyRequestForm \
-		PresidentialPardonForm \
-		Intern
-
+SRC	=	main 
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
