@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
+#    By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/04/04 15:35:51 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/04/04 23:21:33 by ivanpetruni      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME =  ScalarConverter
+NAME =  convert
 
 # FILES AND PATH TO THEM
 

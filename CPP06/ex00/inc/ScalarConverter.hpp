@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 14:09:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/04 19:09:51 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/05 00:06:55 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,7 @@
 #include <cctype>
 #include "Colors.h"
 
-// Class which helps us to determine the input type
-enum InputType
-{
-	CHAR = 1,
-	INT,
-	FLOAT,
-	DOUBLE,
-	INVALID
-};
-	
+
 class ScalarConverter {
 	// Constructors are private to avoid instantiation
 	private:
@@ -37,8 +28,8 @@ class ScalarConverter {
 
 	// Public method to convert
 	public:
-		static void			convert(const std::string input); // Static method allows us to call the method without instantiating the class
-		static InputType	defineTypeOfInput(const std::string input); // Method for defining the input 
+		static void		convert(const std::string input); // Static method allows us to call the method without instantiating the class
+	public:
 };
 
 
