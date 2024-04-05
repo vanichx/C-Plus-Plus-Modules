@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 14:09:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/05 00:06:55 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/05 18:17:05 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class ScalarConverter {
 	// Public method to convert
 	public:
 		static void		convert(const std::string input); // Static method allows us to call the method without instantiating the class
-	public:
 };
 
 
