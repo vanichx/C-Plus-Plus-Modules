@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Classes.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 12:55:13 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/08 15:18:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/08 22:37:23 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <time.h>
-
+#include <exception>
 
 class Base {
 	// Virtual destructor (required by subject)
