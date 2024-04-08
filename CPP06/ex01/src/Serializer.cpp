@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:04:26 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/08 12:13:35 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/08 12:47:55 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ uintptr_t Serializer::serialize(Data * ptr) {
 	
 	uintptr_t customptr = reinterpret_cast<uintptr_t>(ptr);
 
-	std::cout << "serialization value is : " GR << customptr << R << std::endl;
+	std::cout << "serialization value is : " GR BLD << customptr << R << std::endl;
 	return (customptr);
 }
 
@@ -47,6 +47,6 @@ Data* Serializer::deserialize(uintptr_t raw) {
 	
 	Data *customptr = reinterpret_cast<Data *>(raw);
 
-	std::cout << "deserialized address is : " BL << customptr << R << std::endl;
+	std::cout << "deserialized address is : " BL BLD << customptr << R << std::endl;
 	return (customptr);
 }
