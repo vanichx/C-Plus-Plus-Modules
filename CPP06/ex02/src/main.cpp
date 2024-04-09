@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:00:22 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/08 23:38:49 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/09 15:01:28 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ class Unknown : public Base {};
 
 int main(void) {
 	
-	// Base * newClass = generate();
+	Base * newClass = generate();
 	// Base * newClass = new Unknown;
-	Base * newClass = NULL;
+	// Base * newClass = NULL;
 
 	identify(newClass);
 	identify(*newClass);
