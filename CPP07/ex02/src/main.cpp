@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:05:14 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/10 18:16:36 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/10 22:37:57 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int main(int, char**)
             return 1;
         }
     }
+    
     try
     {
         numbers[-2] = 0;
@@ -49,6 +50,7 @@ int main(int, char**)
     {
         std::cerr << e.what() << '\n';
     }
+    
     try
     {
         numbers[MAX_VAL] = 0;
@@ -57,7 +59,7 @@ int main(int, char**)
     {
         std::cerr << e.what() << '\n';
     }
-
+    
     for (int i = 0; i < MAX_VAL; i++)
     {
         numbers[i] = rand();
@@ -65,11 +67,6 @@ int main(int, char**)
     delete [] mirror;
     return 0;
 }
-
-// TO DO
-// Assigment operator
-// A member function size() that returns the number of elements in the array. This
-// member function takes no parameter and musn’t modify the current instance.
 
 // int main()
 // {

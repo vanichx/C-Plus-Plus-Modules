@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:40:14 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/10 18:05:13 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/10 22:30:35 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ class Array {
 		Array(); // Default constructor
 		Array(unsigned int n); // Constructor with an unsigned int n as a parameter
 		Array(const Array<Type> & otherArray); // Copy constructor
-		// Array &operator=(const Array & otherArray); // Assigment operator
+		Type &operator=(const Array & otherArray); // Assigment operator
 		Type &operator[](unsigned int index); // Subscript operator: [ ] 
 	// Destructor
 	public:
 		~Array();
+	// Public methods
+	public:
+		unsigned int size();
 		
 };
 

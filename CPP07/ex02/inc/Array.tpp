@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:34:29 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/10 18:13:42 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/10 22:36:12 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,37 @@ Array<Type>::Array(const Array<Type> &otherArray) : _size(otherArray._size) {
 	// std::cout << "Copy constructor called" << std::endl;
 }
 
-// Array &Array::operator=(const Array & otherArray) {
-// 	std::cout << "Assigment operator called" << std::endl;
-// }
-
 template <class Type>
-Array<Type>::~Array() {
-	// std::cout << "Destructor called" << std::endl;
+Type &Array<Type>::operator=(const Array<Type> & otherArray) {
+	// std::cout << "Assigment operator called" << std::endl;
+	if (*this != otherArray) {
+		_size = otherArray.size();
+		if (_array)
+			delete[] _array;
+		_array = new Type[otherArray.size()];
+		for (unsigned int i = 0; i < otherArray.size(); ++i) {
+			_array[i] = otherArray._array[i];
+		}
+	}
 }
-
 
 template<class Type> 
 Type &Array<Type>::operator[](unsigned int index) {
-	if (index >= this->_size) {
+	if (index >= this->size()) {
 		std::cout << Y BLD "Catched the Exception" R << std::endl;
 		std::cout << "Current index is : " RD BLD << index << R <<std::endl;
 		throw std::out_of_range("Index out of bounds");
 	}
 	return _array[index];
+}
+
+template <class Type>
+Array<Type>::~Array() {
+	delete[] this->_array;
+	// std::cout << "Destructor called" << std::endl;
+}
+
+template<class Type>
+unsigned int Array<Type>::size() {
+	return (this->_size);
 }
