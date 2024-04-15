@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:05:14 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/10 22:37:57 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/15 16:54:32 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,15 +70,15 @@ int main(int, char**)
 
 // int main()
 // {
-// 	// int * a = new int();
-// 	// std::cout << *a << std::endl;
+// 	int * a = new int();
+// 	std::cout << *a << std::endl;
 
-// 	// Array<int> *intArray = new Array<int>(5);
+// 	Array<int> *intArray = new Array<int>(5);
 
 
-// 	// Array<char> charArray;
+// 	Array<char> charArray;
 	
-// 	// std::cout << &hi << std::endl;
-// 	// std::cout << (*hi)[0] << std::endl;
+// 	std::cout << &intArray << std::endl;
+// 	std::cout << (*intArray)[0] << std::endl;
 
 // }
