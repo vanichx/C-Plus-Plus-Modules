@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:38:14 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/16 17:59:44 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/17 11:23:18 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,24 @@ int main()
 	for (int i = 1; i <= 10; i++) {
 		myVector.push_back(i);
 	}
+
+
+	/// FUNCTION ADVANCE 
+	vector <int>::iterator it = myVector.begin();
+	
+	cout << *(it + 3) << endl; 
+								// Those two operation make the same action , they shift the operator on 3 positions right
+	advance(it, 3);
+
+	cout << *it << endl; // Check the value of the iterator 
+
+
+	
+	/// FUNCTION ADVANCE
+
+
+
+
 	// vector <int>::iterator it; // Here we have create the itterator;
 	
 	
@@ -42,10 +60,12 @@ int main()
 	// 	cout << *i << endl;
 	// } 
 	
-	for (vector <int>::reverse_iterator i = myVector.rbegin(); i != myVector.rend(); i++) // Using REVERSE ITERATOR METHOD REND
-	{																			// Here we are using usual iterator , this iterator has access to read and write
-		cout << *i << endl;
-	} 
+	
+
+	// for (vector <int>::reverse_iterator i = myVector.rbegin(); i != myVector.rend(); i++) // Using REVERSE ITERATOR METHOD REND
+	// {																			// Here we are using usual iterator , this iterator has access to read and write
+	// 	cout << *i << endl;
+	// } 
 	
 
 	// for (vector <int>::const_iterator i = myVector.begin(); i != myVector.end(); i++)
