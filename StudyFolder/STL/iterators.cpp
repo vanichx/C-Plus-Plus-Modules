@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:38:14 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/17 11:23:18 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/17 11:43:21 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,65 @@ int main()
 		myVector.push_back(i);
 	}
 
+	// // METHOD INSERT WHICH WORKING WITH ITERATORS ONLY
+	// for (vector <int>::iterator i = myVector.begin(); i != myVector.end(); i++)
+	// {
+	// 	cout << *i << endl;
+	// 	if (i + 1 == myVector.end())
+	// 		cout << endl;
+	// }
+
+	// vector <int>::iterator it = myVector.begin();
+	
+	// advance(it, 5); // If we want to give the iterator specialized index than we need to use advance function.
+
+	// myVector.insert(it, 555); // Here we call insert method.
+
+	
+	// for (vector <int>::iterator i = myVector.begin(); i != myVector.end(); i++)
+	// {
+	// 	cout << *i << endl;
+	// 	if (i + 1 == myVector.end())
+	// 		cout << endl;
+	// }
+	// // METHOD INSERT WHICH WORKING WITH ITERATORS ONLY
+
+
+
+	// METHOD ERASE WHICH WORKING WITH ITERATORS ONLY
+	for (vector <int>::iterator i = myVector.begin(); i != myVector.end(); i++)
+	{
+		cout << *i << endl;
+		if (i + 1 == myVector.end())
+			cout << endl;
+	}
+
+	vector <int>::iterator itErase = myVector.begin();
+
+	cout << "Value which will be erased: " << *itErase << endl << endl;
+	// myVector.erase(itErase); // Here we call ERASE method but only for one index.
+	myVector.erase(itErase, itErase + 3); // Here we call ERASE method but for range fm: itErase to: itErase + 3.
+
+	for (vector <int>::iterator i = myVector.begin(); i != myVector.end(); i++)
+	{
+		cout << *i << endl;
+		if (i + 1 == myVector.end())
+			cout << endl;
+	}
+	// METHOD ERASE WHICH WORKING WITH ITERATORS ONLY
+
+
 
 	/// FUNCTION ADVANCE 
-	vector <int>::iterator it = myVector.begin();
+	// vector <int>::iterator it = myVector.begin();
 	
-	cout << *(it + 3) << endl; 
-								// Those two operation make the same action , they shift the operator on 3 positions right
-	advance(it, 3);
+	// myVector.insert()
 
-	cout << *it << endl; // Check the value of the iterator 
+	// cout << *(it + 3) << endl; 
+	// 							// Those two operation make the same action , they shift the operator on 3 positions right
+	// advance(it, 3);
+
+	// cout << *it << endl; // Check the value of the iterator 
 
 
 	
