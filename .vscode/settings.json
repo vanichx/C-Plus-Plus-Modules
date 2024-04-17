@@ -77,7 +77,8 @@
 		"execution": "cpp",
 		"*.tpp": "c",
 		"__functional_base_03": "c",
-		"__memory": "c"
+		"__memory": "c",
+		"list": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
