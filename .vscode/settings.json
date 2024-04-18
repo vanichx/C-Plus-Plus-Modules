@@ -79,7 +79,8 @@
 		"__functional_base_03": "c",
 		"__memory": "c",
 		"list": "cpp",
-		"forward_list": "cpp"
+		"forward_list": "cpp",
+		"set": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
