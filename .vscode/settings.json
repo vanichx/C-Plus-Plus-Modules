@@ -78,7 +78,8 @@
 		"*.tpp": "c",
 		"__functional_base_03": "c",
 		"__memory": "c",
-		"list": "cpp"
+		"list": "cpp",
+		"forward_list": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
