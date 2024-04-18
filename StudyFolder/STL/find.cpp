@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:50:27 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/18 16:58:59 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:13:36 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class Person
 
 		string Name;
 		double Score;
-}
+};
 
 int main()
 {
@@ -53,11 +53,34 @@ int main()
 	v.push_back(4);
 	v.push_back(4);
 	v.push_back(12);
-	v.push_back(1);
+	// v.push_back(1);
 	v.push_back(2);
-	v.push_back(7);
+	// v.push_back(7);
 
-	vector<int>::iterator = find(v.begin(), v.end(), 12);
+	// vector<int>::iterator resultOfFind = find(v.begin(), v.end(), 122);
+
+	// if (resultOfFind == v.end())
+	// {
+	// 	cout << "Num was NOT found" << endl;
+	// }
+	// else
+	// {
+	// 	cout << "Num was found" << endl;
+	// }
+
+	vector<int>::iterator resultOfFindIf = find_if(v.begin(), v.end(), [](int a)
+	{
+		return a % 2 == 0;
+	});
+
+	if (resultOfFindIf == v.end())
+	{
+		cout << "Num was NOT found" << endl;
+	}
+	else
+	{
+		cout << "Num was found" << endl;
+	}
 
 	return (0);
 }
