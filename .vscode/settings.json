@@ -80,7 +80,8 @@
 		"__memory": "c",
 		"list": "cpp",
 		"forward_list": "cpp",
-		"set": "cpp"
+		"set": "cpp",
+		"__tree": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }

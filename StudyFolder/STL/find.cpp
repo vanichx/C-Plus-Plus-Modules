@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:50:27 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/18 17:13:36 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:34:56 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,9 @@ int main()
 	v.push_back(2);
 	// v.push_back(7);
 
-	// vector<int>::iterator resultOfFind = find(v.begin(), v.end(), 122);
+	vector<int>::iterator resultOfFind = find(v.begin(), v.end(), 122);
 
-	// if (resultOfFind == v.end())
-	// {
-	// 	cout << "Num was NOT found" << endl;
-	// }
-	// else
-	// {
-	// 	cout << "Num was found" << endl;
-	// }
-
-	vector<int>::iterator resultOfFindIf = find_if(v.begin(), v.end(), [](int a)
-	{
-		return a % 2 == 0;
-	});
-
-	if (resultOfFindIf == v.end())
+	if (resultOfFind == v.end())
 	{
 		cout << "Num was NOT found" << endl;
 	}
@@ -81,6 +67,20 @@ int main()
 	{
 		cout << "Num was found" << endl;
 	}
+
+	// vector<int>::iterator resultOfFindIf = find_if(v.begin(), v.end(), [](int a)
+	// {
+	// 	return a % 2 == 0;
+	// });
+
+	// if (resultOfFindIf == v.end())
+	// {
+	// 	cout << "Num was NOT found" << endl;
+	// }
+	// else
+	// {
+	// 	cout << "Num was found" << endl;
+	// }
 
 	return (0);
 }
