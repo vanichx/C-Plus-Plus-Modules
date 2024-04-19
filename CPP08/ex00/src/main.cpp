@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:04:51 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/18 18:14:48 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/19 13:03:28 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void printContainer(Type someContainer)
 int main()
 {
 	/*		Test with std::vector container		*/
-	
 	std::cout << GR BLD "\nTest with std::vector container" R << std::endl;
 	
 	try {
