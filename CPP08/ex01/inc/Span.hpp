@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:24:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/19 18:03:31 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:13:59 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,10 @@ class Span {
 		~Span();
 	// Public methods
 	public:
-		void  addNumber(int number); // method for adding the numbers
+		void  addNumber(int number); // method for adding the number
+		void  addNumbers(int numbers); // improved addNumber method 
 		int shortestSpan(); // method to find shortest Span
-		// int longestSpan(); // method to find longest Span
+		int longestSpan(); // method to find longest Span
 };
-
-
 
 #endif

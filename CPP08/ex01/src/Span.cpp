@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:35:31 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/19 18:02:31 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:32:57 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,12 @@ Span::Span(const Span &other) {
 
 Span &Span::operator=(const Span &other) {
 	std::cout << "Span Assigment operator called" << std::endl;
-	if (*this !=  other)
+	if (this !=  &other)
 	{
 		_maxSize =  other._maxSize;
 		_span = other._span;
 	}
+	return (*this);
 }
 
 Span::~Span() {
@@ -45,21 +46,37 @@ void Span::addNumber(int number) {
 	if (_span.size() ==  _span.capacity()) {
 		throw std::runtime_error(RD"Span is alredy full , can't add number"R);
 	} else {
-		std::cout << GR << number << R " added to Span" << std::endl;
 		_span.push_back(number);
+	}
+}
+
+void Span::addNumbers(int numbers) {
+	if (_span.size() + numbers >  _span.capacity()) {
+		throw std::runtime_error(RD"Span is alredy full , can't add number"R);
+	} else {
+		srand(time(NULL));
+		for(int i = 0; i < numbers; i++) {
+			_span.push_back(rand() % 2);
+		}
 	}
 }
 
 int Span::shortestSpan() {
 	if (_span.size() < 2)
 		throw std::runtime_error(RD"Can't find any span , the span is too small"R);
-	// std::vector<int>::iterator it =
-	return (1);
+	std::sort(_span.begin(), _span.end());
+	int ShortestSpan = _span.at(1) - _span.at(0);
+	for (std::vector<int>::iterator it = _span.begin() + 1; it != _span.end(); it++) {
+		int newShortestSpan = *it - *(it - 1);
+		if (newShortestSpan < ShortestSpan)
+			ShortestSpan = newShortestSpan;
+	}
+	return (ShortestSpan);
 }
 
 int Span::longestSpan() {
 	if (_span.size() < 2)
 		throw std::runtime_error(RD"Can't find any span , the span is too small"R);
-	// std::vector<int>::iterator it =
-	return (1);
+	std::sort(_span.begin(), _span.end());
+	return (*(_span.end() - 1) - *(_span.begin()));
 }
