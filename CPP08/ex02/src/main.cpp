@@ -6,7 +6,7 @@
 /*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:17:41 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/21 19:35:31 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/21 19:38:44 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int main()
 {
+    std::cout << std::endl;
+    std::cout << GR BLD "\tTest from the subject" R << std::endl;
+    
     MutantStack<int> mstack;
     
     mstack.push(5);
@@ -49,14 +52,14 @@ int main()
     // // for example, a std::list, the two outputs should be the same.
 
     // std::cout << std::endl;
-    // std::cout << Y "\tTest with list container" R << std::endl;
+    // std::cout << Y BLD "\tTest with <list> container" R << std::endl;
 
     // std::list< int > lst;
 
     // lst.push_back(5);
     // lst.push_back(17);
 
-    // std::cout << RD << lst.back() << R << std::endl; 
+    // std::cout << lst.back() << std::endl; 
 
     // lst.pop_back();
     // std::cout << lst.size() << std::endl;
