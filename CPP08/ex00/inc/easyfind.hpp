@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:04:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/19 15:23:24 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:50:56 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include <iostream>
 #include <exception>
 #include <algorithm>
-#include "Colors.h"
+
 
 template <typename T>
 void easyfind(T someContainer, int valueNeeded) {
@@ -28,9 +28,9 @@ void easyfind(T someContainer, int valueNeeded) {
 	typename T::iterator iter = find(someContainer.begin(), someContainer.end(), valueNeeded);
 	
 	if (iter == someContainer.end())
-		throw std::out_of_range(RD"Value is not found in this container.\n"R);
+		throw std::out_of_range("Value is not found in this container.\n");
 	else
-		std::cout <<  "Value found : " GR BLD << *iter << R << std::endl;
+		std::cout <<  "Value found : " << *iter << std::endl;
 }
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:04:51 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/19 13:03:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:50:43 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ void printContainer(Type someContainer)
 	std::cout << std::endl;
 }
 
+
 int main()
 {
 	/*		Test with std::vector container		*/
-	std::cout << GR BLD "\nTest with std::vector container" R << std::endl;
+	std::cout << "\nTest with std::vector container" << std::endl;
 	
 	try {
 		std::vector<int> myVector;
@@ -43,7 +44,7 @@ int main()
 	}
 	
 	/*		Test with std::list container		*/
-	std::cout << Y BLD "Test with std::list container" R << std::endl;
+	std::cout << "Test with std::list container" << std::endl;
 	try {
 		std::list<int> myList;
 
@@ -60,7 +61,7 @@ int main()
 	}
 
 	/*		Test with std::deque container		*/
-	std::cout << M BLD "Test with std::deque container" R << std::endl;
+	std::cout << "Test with std::deque container" << std::endl;
 	try {
 		std::deque<int> myDeque;
 

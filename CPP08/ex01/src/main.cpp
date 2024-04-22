@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:36:28 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/21 17:20:24 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/22 19:04:28 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,24 @@
 int main()
 {
 	try {
-		Span sp = Span(100);
+		Span sp = Span(5);
 		
-		// sp.addNumber(6);
-		// sp.addNumber(3);
-		// sp.addNumber(17);
-		// sp.addNumber(9);
+		sp.addNumber(6);
+		sp.addNumber(3);
+		sp.addNumber(17);
+		sp.addNumber(9);
+		sp.addNumber(11);
+		
+		// // Test with the min and max int's
+		// sp.addNumber(2147483647);
+		// sp.addNumber(-2147483648);
+		
 		// sp.addNumber(11);
-		sp.addNumbers(95);
+		// std::vector<int> vectorToAdd(4, 10); // First param amount of numbers that we want to init , second is value to set
+		// sp.addRange(vectorToAdd);
 		
-		std::cout << RD "Shortest span: " R << sp.shortestSpan() << std::endl;
-		std::cout << GR "Longest span: " R << sp.longestSpan() << std::endl;
+		std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 	}
 	catch (std::exception & ex) {
 		std::cout << ex.what() << std::endl;

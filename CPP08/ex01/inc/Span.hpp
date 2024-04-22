@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:24:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:13:59 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/22 18:16:05 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 #include <string>
 #include <algorithm>
 #include <exception>
-#include "Colors.h"
 
 class Span {
 
@@ -40,9 +39,9 @@ class Span {
 	// Public methods
 	public:
 		void  addNumber(int number); // method for adding the number
-		void  addNumbers(int numbers); // improved addNumber method 
-		int shortestSpan(); // method to find shortest Span
-		int longestSpan(); // method to find longest Span
+		void  addRange(std::vector<int> vector); // improved addNumber method 
+		unsigned int shortestSpan(); // method to find shortest Span
+		unsigned int longestSpan(); // method to find longest Span
 };
 
 #endif

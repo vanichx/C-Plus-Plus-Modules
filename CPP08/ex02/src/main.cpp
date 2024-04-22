@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:17:41 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/21 19:38:44 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/22 19:04:03 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
     std::cout << std::endl;
-    std::cout << GR BLD "\tTest from the subject" R << std::endl;
+    std::cout << "\tTest from the subject" << std::endl;
     
     MutantStack<int> mstack;
     
@@ -79,20 +79,6 @@ int main()
     //     ++lst_it;
     // }
     // std::list<int> l(lst);
-    
-    // // My tests 
-    // std::stack<int> s(mstack); // Using the copy constructor creating the s stack;
-
-    // if (s.empty())
-    //     std::cout << "This stack is empty" << std::endl;
-    // else
-	//     std::cout << "Stack is not empty." << std::endl;
-    
-    // for (int i = 0; i < 10; ++i)
-	//     mstack.push(i); // Pushing the elements in the s stack;
-
-	// for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); ++it)
-	//     std::cout << "Elements from the s stack :" GR << *it << R << std::endl; // Printing all the elements
     
     return 0;
 }

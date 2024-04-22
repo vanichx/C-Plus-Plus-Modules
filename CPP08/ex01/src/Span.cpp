@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:35:31 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/21 17:22:16 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/22 18:15:28 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Span::Span() : _maxSize(0), _span(0) {
 	// std::cout << "Span Default constructor called" << std::endl;
+
 }
 
 Span::Span(unsigned int numberOfIntegers) : _maxSize(numberOfIntegers) {
@@ -22,7 +23,7 @@ Span::Span(unsigned int numberOfIntegers) : _maxSize(numberOfIntegers) {
 	
 }
 
-Span::Span(const Span &other) : _maxSize(other._maxSize), _span(other._span) {
+Span::Span(const Span &other) {
 	// std::cout << "Span Copy constructor called" << std::endl;
 	*this = other;
 }
@@ -44,39 +45,36 @@ Span::~Span() {
 
 void Span::addNumber(int number) {
 	if (_span.size() ==  _span.capacity()) {
-		throw std::runtime_error(RD"Span is alredy full , can't add number"R);
+		throw std::runtime_error("Span is alredy full , can't add number");
 	} else {
 		_span.push_back(number);
 	}
 }
 
-void Span::addNumbers(int numbers) {
-	if (_span.size() + numbers >  _span.capacity()) {
-		throw std::runtime_error(RD"Span is alredy full , can't add number"R);
-	} else {
-		srand(time(NULL));
-		for(int i = 0; i < numbers; i++) {
-			_span.push_back(rand() % 201 - 100);
-		}
-	}
+void Span::addRange(std::vector<int> vector) {
+	if (_span.size() + vector.size() >  _span.capacity())
+		throw std::runtime_error("Span is alredy full , can't add number");
+	_span.insert(_span.end(), vector.begin(), vector.end());
 }
 
-int Span::shortestSpan() {
+unsigned int Span::shortestSpan() {
 	if (_span.size() < 2 || _span.empty())
-		throw std::runtime_error(RD"Can't find any span , the span is too small or empty "R);
+		throw std::runtime_error("Can't find any span , the span is too small or empty ");
 	std::sort(_span.begin(), _span.end());
-	int ShortestSpan = _span[1] - _span[0];
+	unsigned int ShortestSpan = static_cast<long int>(_span[1]) -  static_cast<long int>(_span[0]);
 	for (std::vector<int>::iterator it = _span.begin() + 1; it != _span.end(); it++) {
-		int newShortestSpan = *it - *(it - 1);
+		unsigned int newShortestSpan = static_cast<long int>(*it) - static_cast<long int>(*(it - 1));
 		if (newShortestSpan < ShortestSpan)
 			ShortestSpan = newShortestSpan;
 	}
 	return (ShortestSpan);
 }
 
-int Span::longestSpan() {
+unsigned int Span::longestSpan() {
 	if (_span.size() < 2 || _span.empty())
-		throw std::runtime_error(RD"Can't find any span , the span is too small or empty"R);
-	std::sort(_span.begin(), _span.end());
-	return (*(_span.end() - 1) - *(_span.begin()));
+		throw std::runtime_error("Can't find any span , the span is too small or empty");
+	long int max = *std::max_element(_span.begin(), _span.end());
+	long int min = *std::min_element(_span.begin(), _span.end());
+	long int res = max - min;
+	return (res);
 }

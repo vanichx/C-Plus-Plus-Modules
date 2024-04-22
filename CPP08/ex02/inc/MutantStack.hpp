@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:15:42 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/21 19:34:54 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/22 18:55:26 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@
 #include <list>
 #include <deque>
 #include <stack>
-#include "Colors.h"
 
-template <class Type>
+template <class Type,  typename Container = std::deque<Type> >
 class MutantStack : public std::stack<Type>{
     public:
     // Constructors
