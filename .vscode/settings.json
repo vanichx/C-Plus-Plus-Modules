@@ -82,7 +82,8 @@
 		"forward_list": "cpp",
 		"set": "cpp",
 		"__tree": "cpp",
-		"version": "cpp"
+		"version": "cpp",
+		"map": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
