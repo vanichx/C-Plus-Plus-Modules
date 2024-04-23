@@ -6,7 +6,7 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/04/23 15:32:24 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/04/23 16:54:37 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ NAME =  btc
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	main 
+SRC	=	main \
+		BitcoinExchange
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
