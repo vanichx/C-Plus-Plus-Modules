@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:36:28 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/22 19:04:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:50:52 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int main()
 		// sp.addNumber(2147483647);
 		// sp.addNumber(-2147483648);
 		
-		// sp.addNumber(11);
-		// std::vector<int> vectorToAdd(4, 10); // First param amount of numbers that we want to init , second is value to set
-		// sp.addRange(vectorToAdd);
+		// Test for addRange function
+		// std::vector<int> vectorToAdd(5, 10); // First param amount of numbers that we want to init , second is value to set
+		// sp.addRange(vectorToAdd.begin(), vectorToAdd.end());
 		
 		std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
 		std::cout << "Longest span: " << sp.longestSpan() << std::endl;

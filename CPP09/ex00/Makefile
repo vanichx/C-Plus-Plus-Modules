@@ -6,21 +6,20 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 14:19:13 by ipetruni          #+#    #+#              #
-#    Updated: 2024/04/23 15:51:08 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/04/23 15:32:24 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # SETUP OF THE PROGRAM
 
-NAME =  Span
+NAME =  btc
 
 # FILES AND PATH TO THEM
 
 OBJ_DIR = obj/
 SRC_DIR = src/
 
-SRC	=	main \
-		Span
+SRC	=	main 
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))

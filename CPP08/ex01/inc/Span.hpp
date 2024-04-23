@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:24:37 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/22 18:16:05 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:45:25 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ class Span {
 		~Span();
 	// Public methods
 	public:
-		void  addNumber(int number); // method for adding the number
-		void  addRange(std::vector<int> vector); // improved addNumber method 
-		unsigned int shortestSpan(); // method to find shortest Span
-		unsigned int longestSpan(); // method to find longest Span
+		void			addNumber(int number); // method for adding the number
+		void			addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end); // improved addNumber method 
+		unsigned int	shortestSpan(); // method to find shortest Span
+		unsigned int	longestSpan(); // method to find longest Span
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:35:31 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/22 18:15:28 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:42:58 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,14 @@ void Span::addNumber(int number) {
 	}
 }
 
-void Span::addRange(std::vector<int> vector) {
-	if (_span.size() + vector.size() >  _span.capacity())
-		throw std::runtime_error("Span is alredy full , can't add number");
-	_span.insert(_span.end(), vector.begin(), vector.end());
+void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end) {
+		// Calculate the number of elements to be added
+		size_t count = std::distance(begin, end);
+		// Check if adding these elements would exceed the capacity
+		if (_span.size() + count > _span.capacity())
+			throw std::runtime_error("Span is already full, can't add numbers");
+		// Insert the range into the _span vector
+		_span.insert(_span.end(), begin, end);
 }
 
 unsigned int Span::shortestSpan() {
