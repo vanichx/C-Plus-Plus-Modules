@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:07:39 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/16 16:00:54 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:27:35 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int main()
 	cout << "size of vector "<< myVector.size() << endl;
 	cout << "capacity of vector "<< myVector.capacity() << endl;
 
+	
 	// myVector.shrink_to_fit(); // optimize the number of elements , in case you have a big capacity and small size
 
 	// cout << "after" << endl;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 17:24:45 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/21 18:05:28 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/23 17:27:17 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int main()
     // Unfortunately we can not iterate throught the stack that's why we cant call iterator in while loop
 
     // But we can extract the top element's by using .pop() an by helping of this we can imitate "iteration" through the stack
+
+	
 
     while (!st.empty())
     {
