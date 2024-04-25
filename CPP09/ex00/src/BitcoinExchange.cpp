@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:34:29 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/24 17:38:04 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/25 20:25:48 by ivanpetruni      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/BitcoinExchange.hpp"
+
+std::string	BitcoinExchange::removeWhitespace(const std::string& str) {
+	std::string trimmed;
+	for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
+		if (!std::isspace(static_cast<unsigned char>(*it))) {
+			trimmed += *it;
+		}
+	}
+	return (trimmed);
+}
 
 int BitcoinExchange::parseFileName(const std::string filename) {
 	std::string	txt = "txt";
@@ -24,7 +34,6 @@ int BitcoinExchange::parseFileName(const std::string filename) {
 		return (1);
 }
 
-
 void BitcoinExchange::parseFile(const std::string filename) {
 	std::ifstream myFileStream;
 	try {
@@ -32,43 +41,103 @@ void BitcoinExchange::parseFile(const std::string filename) {
 		if (myFileStream.is_open())
 			parseDataInFile(myFileStream);
 		else
-			throw std::invalid_argument("Something went wrong... Coudnt open file");
+			throw std::invalid_argument("Something went wrong... Coudnt open input file");
 	} catch (std::exception & ex) {
+		myFileStream.close();
 		std::cout << ex.what() << std::endl;
 	}
 }
 
-//////////////////////////////  TO DO ///////////////////////////////////////////////
+void BitcoinExchange::finalOutput(int yyyy, int mm, int dd, double rate, std::string date) {
+	
+	bool isLeapYear = (yyyy % 4 == 0 && (yyyy % 100 != 0 || yyyy % 400 == 0));
+	int daysInMonth[] = {31, 28 + isLeapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+	std::ostringstream oss;
+	
+	if (yyyy < 1900 || yyyy > 2024 || mm < 1 || mm > 12 || dd < 1 || dd > daysInMonth[mm - 1])
+		oss << "Error: bad input => " << yyyy << "-" << mm << "-" << dd;
+	else if (rate == -404)
+		oss << "Error: bad input => " << yyyy << "-" << mm << "-" << dd;
+	else if (rate < 0)
+		oss << "Error: not a positive number.";
+	else if (rate > 1000)
+		oss << "Error: too large a number.";
+	else {
+		// Find the rate corresponding to the given date
+		std::map<std::string, double>::iterator key = _mapContainer.find(date);
+		if (key == _mapContainer.end()) {
+			// Find the closest lower date
+			std::map<std::string, double>::iterator lower = _mapContainer.lower_bound(date);
+			if (lower != _mapContainer.begin()) {
+				--lower; // Move to the closest lower date
+				key = lower; // Set the iterator to the closest lower date
+			}
+		}
+		if (key == _mapContainer.end()) {
+			oss << "Error: No rate found for date " << date;
+		} else {
+			double result = key->second * rate;
+			oss << yyyy << "-" << std::setw(2) << std::setfill('0') << mm << "-" << std::setw(2) << std::setfill('0') << dd << " => " << rate << " = " << result;
+		}
+	}
+	std::cout << oss.str() << std::endl;
+
+}
+
 
 void BitcoinExchange::parseDataInFile(std::ifstream & myFileStream) {
+	
 	std::string myString;
-	std::string line;
-	std::string day, month, year, weekday, space;
-	char separator = '-';
-	(void)separator;
 	if (myFileStream)
 		std::getline(myFileStream, myString);
 	myString = removeWhitespace(myString);
 	if (myString != "date|value")
 		throw std::runtime_error("Error: Invalid header of the input file");
-	while (myFileStream.good()) {
-		std::getline(myFileStream, myString);
-		std::cout << myString << std::endl;
+	while (std::getline(myFileStream, myString)) {
+		int yyyy = 0, mm = 0, dd = 0;
+		double rate = 0.0;
+		std::stringstream y, m, d, srate;
+		std::string date = myString.substr(0, 4) + myString.substr(5, 2) + myString.substr(8, 2);
+		y << myString.substr(0, 4); // First param starting pos and second how much to substruct
+		m << myString.substr(5, 2);
+		d << myString.substr(8, 2);
+		
+		y >> yyyy;
+		m >> mm;
+		d >> dd;
+		if (myString.length() > 13) {
+			srate << myString.substr(13);
+			if (!(srate >> rate))
+				throw std::runtime_error("Error: Invalid rate format in the input file");
+		} else
+			rate = -404;
+		finalOutput(yyyy, mm, dd, rate, date);
 	}
 }
 
-//////////////////////////////  TO DO ///////////////////////////////////////////////
-
-std::string	BitcoinExchange::removeWhitespace(const std::string& str) {
-	std::string trimmed;
-	for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
-		if (!std::isspace(static_cast<unsigned char>(*it))) {
-			trimmed += *it;
-		}
+void BitcoinExchange::parseCsvFile(std::string myDbFileName) {
+	std::ifstream myDbFileStream(myDbFileName);
+	if (!myDbFileStream)
+		throw std::runtime_error("Error: empty csv file");
+	std::string myString;
+	if (myDbFileStream)
+		std::getline(myDbFileStream, myString);
+	myString = removeWhitespace(myString);
+	if (myString != "date,exchange_rate")
+		throw std::runtime_error("Error: Invalid header of the Data Base input file");
+	while (std::getline(myDbFileStream, myString)) {
+		
+		std::string date = myString.substr(0,10).erase(4,1).erase(6,1);
+		std::stringstream convert;
+		double valueAtDate = 0.0;
+		
+		convert << myString.substr(11);
+		convert >> valueAtDate;
+		
+		_mapContainer.insert(std::make_pair(date, valueAtDate));
 	}
-	return (trimmed);
 }
-
 
 BitcoinExchange::BitcoinExchange() {
 	// std::cout << "Default constructor called" << std::endl;
@@ -77,8 +146,10 @@ BitcoinExchange::BitcoinExchange() {
 BitcoinExchange::BitcoinExchange(const std::string filename) {
 	// std::cout << "Filename constructor called" << std::endl;
 	try {
-		if (parseFileName(filename) == 0)
+		if (parseFileName(filename) == 0) {
+			parseCsvFile("data.csv");
 			parseFile(filename);
+		}
 		else
 			throw std::invalid_argument("Wrong file extension, should be .txt");
 	} catch (std::exception & ex) {
