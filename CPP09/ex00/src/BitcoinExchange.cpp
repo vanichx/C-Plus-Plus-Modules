@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:34:29 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/26 14:27:12 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:31:47 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,10 @@ void BitcoinExchange::parseFile(const std::string filename) {
 		myFileStream.open(filename);
 		if (myFileStream.is_open())
 			parseDataInFile(myFileStream);
-		else
+		else 
 			throw std::invalid_argument("Something went wrong... Coudnt open input file");
-	} catch (std::exception & ex) {
+	}
+	catch (std::exception & ex) {
 		myFileStream.close();
 		std::cout << ex.what() << std::endl;
 	}
@@ -64,14 +65,14 @@ void BitcoinExchange::finalOutput(int yyyy, int mm, int dd, double rate, std::st
 	else if (rate > 1000)
 		oss << "Error: too large a number.";
 	else {
-		// Find the rate corresponding to the given date
+		
 		std::map<std::string, double>::iterator key = _mapContainer.find(date);
+		
 		if (key == _mapContainer.end()) {
-			// Find the closest lower date
 			std::map<std::string, double>::iterator lower = _mapContainer.lower_bound(date);
 			if (lower != _mapContainer.begin()) {
-				--lower; // Move to the closest lower date
-				key = lower; // Set the iterator to the closest lower date
+				--lower;
+				key = lower;
 			}
 		}
 		if (key == _mapContainer.end()) {
