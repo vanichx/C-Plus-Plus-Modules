@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 21:19:46 by ivanpetruni       #+#    #+#             */
-/*   Updated: 2024/04/22 22:44:38 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/26 13:32:51 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,15 @@ using namespace std;
     map
 
     multimap
+
 */
+
+void PrintMultiMap(multimap<string, int> & myMMap)
+{
+	for (multimap<string, int>::reverse_iterator it = myMMap.rbegin(); it != myMMap.rend(); it++) {
+		cout << it->first << " - " << it->second << endl;
+	}
+}
 
 int main()
 {
@@ -108,55 +116,56 @@ int main()
 
     // //  #######################################   EXAMPLE #2 ####################################### 
     
-    map<string, int> myMap;
+    multimap<string, int> myMap;
 
+    myMap.insert(pair<string, int>("Petya", 1313)); // Key is name and value its amount of money on the account  
     myMap.insert(pair<string, int>("Petya", 1313)); // Key is name and value its amount of money on the account  
     myMap.insert(pair<string, int>("Masha", 222)); // Key is name and value its amount of money on the account 
     myMap.insert(pair<string, int>("Misha", 4441)); // Key is name and value its amount of money on the account 
 
-    
-    cout << myMap["Petya"] << endl; // Specify the key , and look it will print the 1313 to the teminal
-    cout << myMap["Masha"] << endl; // Specify the key , and look it will print the 222 to the teminal
-    cout << myMap["Misha"] << endl; // Specify the key , and look it will print the 4441 to the teminal
+    PrintMultiMap(myMap);
+    // cout << myMap["Petya"] << endl; // Specify the key , and look it will print the 1313 to the teminal
+    // cout << myMap["Masha"] << endl; // Specify the key , and look it will print the 222 to the teminal
+    // cout << myMap["Misha"] << endl; // Specify the key , and look it will print the 4441 to the teminal
 
 
-    // WE CAN CHANGE THE VAKUE BY SPEC THE KEY
-    myMap["Petya"] = 7777;
-    // To check the value ill print it 
-    cout << myMap["Petya"] << endl;  // and here we are the new value was assigned to this container 7777 appear in the terminal
+    // // WE CAN CHANGE THE VAKUE BY SPEC THE KEY
+    // myMap["Petya"] = 7777;
+    // // To check the value ill print it 
+    // cout << myMap["Petya"] << endl;  // and here we are the new value was assigned to this container 7777 appear in the terminal
 
 
-    // IF WE TRY TO ASSIGN SOME VALUE TO THE ELEMENT WHICH IS NOT EXISTING 
-    // FOR EXAMPLE 
-    myMap["Vasya"] = 888; // ELEMENT "Vasya" does not exist , and this element will be added to the map
-    // THIS ELEMENT WAS ADDED TO THE CONTAINER
-    // cout << myMap.size() << endl; // Size will be + 1;
+    // // IF WE TRY TO ASSIGN SOME VALUE TO THE ELEMENT WHICH IS NOT EXISTING 
+    // // FOR EXAMPLE 
+    // myMap["Vasya"] = 888; // ELEMENT "Vasya" does not exist , and this element will be added to the map
+    // // THIS ELEMENT WAS ADDED TO THE CONTAINER
+    // // cout << myMap.size() << endl; // Size will be + 1;
 
-    /// METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at()
-    myMap.at("Masha") = 9191; // In this case it will find elem "Masha" but what if the element does not exist 
-    try {
-        myMap.at("Dasha") = 8383; // THIS CASE WE DONT HAVE ELEMENT "DASHA" 
-    } catch (std::exception & ex) {
-        cout << ex.what() << endl;
-        cout << "This key is not in this container" << endl;
-    }
-    /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
-    /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
-    /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
-    /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
-    /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
-    /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
-    /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
-    /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
-    /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
-    /// METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at()
+    // /// METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at()
+    // myMap.at("Masha") = 9191; // In this case it will find elem "Masha" but what if the element does not exist 
+    // try {
+    //     myMap.at("Dasha") = 8383; // THIS CASE WE DONT HAVE ELEMENT "DASHA" 
+    // } catch (std::exception & ex) {
+    //     cout << ex.what() << endl;
+    //     cout << "This key is not in this container" << endl;
+    // }
+    // /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
+    // /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
+    // /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
+    // /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
+    // /// !!!!!!!!!!!!! BY USING OPERATOR .at() WE CANT ADD THIS ELEM TO CONTAINER IN CASE
+    // /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
+    // /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
+    // /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
+    // /// !!!!!!!!!!!!! IT WILL JUST IGNORE IT AND THROW an EXCEPTION std::out_of_range  
+    // /// METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at() METHOD .at()
 
 
 
-    // IF WE WANT TO DELETE THE ELEMENT FOR MAP
+    // // IF WE WANT TO DELETE THE ELEMENT FOR MAP
 
-    myMap.erase("Petya");
-    cout << myMap.size() << endl; // size is 3
+    // myMap.erase("Petya");
+    // cout << myMap.size() << endl; // size is 3
     
     // IF WE WANT TO DELETE THE ELEMENT FOR MAP
 

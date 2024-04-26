@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:34:51 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/25 20:22:05 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/26 14:24:34 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void PrintMapContainer(std::map<std::string, double> mapContainer)
 }
 
 // Need to check for a proper closing of filestream in case of failure
-// Need to fix the case when there is no data at all;
+
 
 int main(int argc, char **argv)
 {

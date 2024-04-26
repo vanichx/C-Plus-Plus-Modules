@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanpetrunin <ivanpetrunin@student.42.f    +#+  +:+       +#+        */
+/*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:34:29 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/25 20:25:48 by ivanpetruni      ###   ########.fr       */
+/*   Updated: 2024/04/26 14:27:12 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,24 +118,42 @@ void BitcoinExchange::parseDataInFile(std::ifstream & myFileStream) {
 
 void BitcoinExchange::parseCsvFile(std::string myDbFileName) {
 	std::ifstream myDbFileStream(myDbFileName);
-	if (!myDbFileStream)
+	if (!myDbFileStream) {
+		myDbFileStream.close();
 		throw std::runtime_error("Error: empty csv file");
+	}
 	std::string myString;
 	if (myDbFileStream)
 		std::getline(myDbFileStream, myString);
 	myString = removeWhitespace(myString);
-	if (myString != "date,exchange_rate")
+	if (myString != "date,exchange_rate") {
+		myDbFileStream.close();	
 		throw std::runtime_error("Error: Invalid header of the Data Base input file");
+	}
 	while (std::getline(myDbFileStream, myString)) {
 		
-		std::string date = myString.substr(0,10).erase(4,1).erase(6,1);
-		std::stringstream convert;
-		double valueAtDate = 0.0;
+		size_t comma_pos = myString.find(',');
 		
-		convert << myString.substr(11);
-		convert >> valueAtDate;
-		
-		_mapContainer.insert(std::make_pair(date, valueAtDate));
+		if (comma_pos != 10) {
+			myDbFileStream.close();	
+			throw std::runtime_error("Error: invalid reading of data.csv");
+		} else if (comma_pos != std::string::npos && comma_pos < myString.length() - 1) {
+			std::string date = myString.substr(0,comma_pos).erase(4,1).erase(6,1);
+			std::stringstream convert;
+			double valueAtDate = 0.0;
+			
+			convert << myString.substr(comma_pos + 1);
+			convert >> valueAtDate;
+			if (convert.fail() || !convert.eof()) {
+				myDbFileStream.close();
+				throw std::runtime_error("Error: invalid value format");
+			}
+
+			_mapContainer.insert(std::make_pair(date, valueAtDate));
+		} else {
+			myDbFileStream.close();
+			throw std::runtime_error("Error: invalid reading of data.csv");
+		}
 	}
 }
 
