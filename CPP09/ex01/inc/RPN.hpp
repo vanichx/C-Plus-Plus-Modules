@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:37:38 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/30 16:07:51 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:29:57 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class RPN {
 	
 	// Stack Container
 	private:
-		std::stack<int> _myStack;
+		std::stack<int> _myStack; /// NEED TO SPEC HERE WHAT TYPE OF CONT BEHIND
 	// Constructors
 	public:
 		RPN(const std::string inputString);
