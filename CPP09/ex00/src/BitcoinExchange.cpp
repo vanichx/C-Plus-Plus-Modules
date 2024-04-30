@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:34:29 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/26 14:31:47 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/04/30 11:54:33 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,12 +177,12 @@ BitcoinExchange::BitcoinExchange(const std::string filename) {
 }
 
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &other) {
-	std::cout << "Copy constructor called" << std::endl;
+	// std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
 BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &other) {
-	std::cout << "Assigment operator called" << std::endl;
+	// std::cout << "Assigment operator called" << std::endl;
 	if (this != &other) {
 		_mapContainer = other._mapContainer;
 	}
