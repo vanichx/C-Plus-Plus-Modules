@@ -6,7 +6,7 @@
 #    By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 10:26:45 by ipetruni          #+#    #+#              #
-#    Updated: 2024/05/03 10:27:00 by ipetruni         ###   ########.fr        #
+#    Updated: 2024/05/03 11:48:51 by ipetruni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJ_DIR = obj/
 SRC_DIR = src/
 
 SRC	=	main \
-		RPN
+		PmergeMe
 
 SRCS =  $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
