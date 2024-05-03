@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 10:28:54 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/05/03 11:59:38 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:12:00 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(int argc, char **argv)
 
 			Obj.assignVector(argv);
 			Obj.assignList(argv);
+			Obj.sortAndPrint();
 			
 		} catch (std::exception & ex) {
 			std::cout << ex.what() << std::endl;
@@ -28,7 +29,7 @@ int main(int argc, char **argv)
 
 	} 
 	else {
-		std::cerr << "Error: No sequence provided." << std::endl;
+		std::cerr << "Error: No sequence provided" << std::endl;
 		return 1;
 	}
 

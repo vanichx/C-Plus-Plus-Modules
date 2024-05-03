@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 10:28:33 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/05/03 13:45:14 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:09:53 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 class PmergeMe {
 
-	// Containers which im allowed to use
+	// Containers which im allowed to use in this Ex.
 	std::list<int> _myList;
 	std::vector<int> _myVector; 
 
@@ -36,11 +36,23 @@ class PmergeMe {
 	// Destructors
 	public:
 		~PmergeMe();
-	// Methods
+		
+	// Methods for std::vector container
 	public:
 		void assignVector(char **argv);
+		void insertionSortVector();
+		void mergeSortVector(int left, int right);
+		void merge(std::vector<int>& arr, int left, int mid, int right);
+	// Methods for std::list container
+	public:
 		void assignList(char **argv);
+		void insertionSortList();
+		void mergeSortList(std::list<int>& lst);
+		void mergeList(std::list<int>& left, std::list<int>& right);
 		
+	
+	// Main sorting method
+		void sortAndPrint();
 };
 
 #endif

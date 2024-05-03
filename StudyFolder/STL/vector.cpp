@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:07:39 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/23 17:27:35 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:05:29 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int main()
 	// myVector.resize(20); // change the size of vector 
 
 	// myVector.push_back(2); // .push_back() just add one more ellemet to the end of the vector
+	myVector.push_back(44);
+	myVector.push_back(44);
+	myVector.push_back(44);
+	myVector.push_back(44);
+	myVector.push_back(44);
 	myVector.push_back(44);
 	// myVector.push_back(44);
 
