@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 10:28:33 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/05/03 11:54:13 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:45:14 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <list>
 #include <ctime>
 #include <vector>
+#include <string>
 #include <iostream>
 #include <exception>
 #include <algorithm>

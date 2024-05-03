@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 10:28:45 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/05/03 12:14:08 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:54:18 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,23 @@ PmergeMe::~PmergeMe() {
 	// std::cout << "PmergeMe destructor called" << std::endl;
 }
 
-// Methods
+// Methods for <vector> container
 
 void PmergeMe::assignVector(char **argv) {
 	
 	int i = 1;
-	int numToAssign;
 	
 	while (argv[i]) {
-		numToAssign = std::atoi(argv[i]);
+		
+		std::string str = argv[i];
+		if (str.find_first_not_of("0123456789 ") != std::string::npos) {
+			throw std::runtime_error("Error: invalid input");
+			return;
+		}
+		
+		int numToAssign = std::atoi(argv[i]);
 		if (numToAssign < 0) {
-			throw std::runtime_error("Error: trying to add negative number to the container");
+			throw std::runtime_error("Error: invalid input");
 			return;
 		}
 		else
@@ -66,23 +72,24 @@ void PmergeMe::assignVector(char **argv) {
 	}
 }
 
+
+// Methods for <list> container
+
 void PmergeMe::assignList(char **argv) {
 	
 	int i = 1;
-	int numToAssign;
 	
 	while (argv[i]) {
-		try {
-			numToAssign = std::atoi(argv[i]);
-				if (!numToAssign) {
-					throw std::runtime_error("Error: trying to add negative number to the container");
-					return;
-				}
-		} catch (std::exception & ex) {
-			std::cout << ex.what() << std::endl;
+		
+		std::string str = argv[i];
+		if (str.find_first_not_of("0123456789 ") != std::string::npos) {
+			throw std::runtime_error("Error: invalid input");
+			return;
 		}
+		
+		int numToAssign = std::atoi(argv[i]);
 		if (numToAssign < 0) {
-			throw std::runtime_error("Error: trying to add negative number to the container");
+			throw std::runtime_error("Error: invalid input");
 			return;
 		}
 		else
