@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:38:20 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/30 17:31:38 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 10:25:41 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ bool RPN::doOperation(char c) {
 	if (_myStack.size() < 2)
 		return false;
 	
-	// // TO DO Need to check that value which is bigger than max int is pasin tom the result
-
 	int a = _myStack.top(); // Returns to us the value of the latest element 
 	_myStack.pop(); // Delete from container latest element
 	

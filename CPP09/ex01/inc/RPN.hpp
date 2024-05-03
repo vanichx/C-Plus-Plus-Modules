@@ -6,7 +6,7 @@
 /*   By: ipetruni <ipetruni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:37:38 by ipetruni          #+#    #+#             */
-/*   Updated: 2024/04/30 17:29:57 by ipetruni         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:04:31 by ipetruni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 #include <string>
 #include <sstream> // Used for std::istringstream similar to std::cin which reads from the standard input stream, but std::istringstream reads from a string instead
 #include <stack>
+#include <list>
 #include <algorithm>
 
 class RPN {
 	
 	// Stack Container
 	private:
-		std::stack<int> _myStack; /// NEED TO SPEC HERE WHAT TYPE OF CONT BEHIND
+		std::stack<int> _myStack;
 	// Constructors
 	public:
 		RPN(const std::string inputString);
